@@ -1,13 +1,17 @@
 package mate.acadamy.internetshop.service.impl;
 
-import mate.acadamy.internetshop.annotation.Servise;
 import mate.acadamy.internetshop.dao.ItemDao;
+import mate.acadamy.internetshop.lib.Inject;
+import mate.acadamy.internetshop.lib.Service;
 import mate.acadamy.internetshop.model.Item;
 import mate.acadamy.internetshop.service.ItemService;
 
-@Servise
+@Service
 public class ItemServiceImpl implements ItemService {
-    private ItemDao itemDao;
+
+    @Inject
+    private static ItemDao itemDao;
+
     @Override
     public Item create(Item item) {
         return itemDao.create(item);
@@ -32,4 +36,6 @@ public class ItemServiceImpl implements ItemService {
     public void delete(Item item) {
         itemDao.delete(item);
     }
+
+
 }
