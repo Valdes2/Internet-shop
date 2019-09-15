@@ -2,6 +2,7 @@ package mate.acadamy.internetshop;
 
 import mate.acadamy.internetshop.lib.Inject;
 import mate.acadamy.internetshop.lib.Injector;
+import mate.acadamy.internetshop.lib.Service;
 import mate.acadamy.internetshop.model.Bucket;
 import mate.acadamy.internetshop.model.Item;
 import mate.acadamy.internetshop.model.Order;
@@ -11,6 +12,7 @@ import mate.acadamy.internetshop.service.ItemService;
 import mate.acadamy.internetshop.service.OrderService;
 import mate.acadamy.internetshop.service.UserService;
 
+@Service
 public class Main {
 
     static {
@@ -45,7 +47,8 @@ public class Main {
         bucketService.addItem(bucket.getId(), book.getId());
         bucketService.update(bucket);
 
-        Order newOrder = orderService.completeOrder(bucket.getItems(), firstUser.getId());
+        Order newOrder = new Order(firstUser.getId(), bucket.getItems());
+        orderService.completeOrder(bucket.getItems(), firstUser.getId());
         bucketService.clear(bucket.getId());
         bucketService.update(bucket);
 

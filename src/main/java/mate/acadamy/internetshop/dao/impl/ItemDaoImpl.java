@@ -63,7 +63,7 @@ public class ItemDaoImpl implements ItemDao {
     public Item delete(Item item) {
         Optional<Item> currentItem = Storage.items
                 .stream()
-                .filter(x -> x.getId().equals(item.getId()))
+                .filter(x -> x.equals(item))
                 .findAny();
         if (!currentItem.equals(Optional.of(item))) {
             Item deletedItem = item;

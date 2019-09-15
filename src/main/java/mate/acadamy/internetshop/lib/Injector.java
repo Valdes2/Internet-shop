@@ -15,6 +15,7 @@ import mate.acadamy.internetshop.service.BucketService;
 import mate.acadamy.internetshop.service.ItemService;
 import mate.acadamy.internetshop.service.OrderService;
 import mate.acadamy.internetshop.service.UserService;
+import mate.acadamy.internetshop.service.impl.BucketServiceImpl;
 import mate.acadamy.internetshop.service.impl.ItemServiceImpl;
 import mate.acadamy.internetshop.service.impl.OrderServiceImpl;
 import mate.acadamy.internetshop.service.impl.UserServiceImpl;
@@ -34,7 +35,7 @@ public class Injector {
     }
 
     public static void injectDependency() throws IllegalAccessException {
-        inject(BucketService.class.getDeclaredFields());
+        inject(BucketServiceImpl.class.getDeclaredFields());
         inject(ItemServiceImpl.class.getDeclaredFields());
         inject(OrderServiceImpl.class.getDeclaredFields());
         inject(UserServiceImpl.class.getDeclaredFields());
