@@ -20,7 +20,8 @@ public class ItemDaoImpl implements ItemDao {
             Storage.items.add(item);
             return item;
         } else {
-            throw new NoSuchElementException("Current item already created");
+            update(item);
+            return item;
         }
     }
 
@@ -57,21 +58,5 @@ public class ItemDaoImpl implements ItemDao {
         } else {
             throw new NoSuchElementException("Can`t find item with id " + id);
         }
-    }
-
-    @Override
-    public Item delete(Item item) {
-        Optional<Item> currentItem = Storage.items
-                .stream()
-                .filter(x -> x.equals(item))
-                .findAny();
-        if (!currentItem.equals(Optional.of(item))) {
-            Item deletedItem = item;
-            Storage.items.removeIf(x -> x.equals(item));
-            return deletedItem;
-        } else {
-            throw new NoSuchElementException("Can`t find item " + item.getName());
-        }
-
     }
 }

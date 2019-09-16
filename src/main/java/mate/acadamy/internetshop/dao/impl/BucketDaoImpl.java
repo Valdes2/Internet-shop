@@ -20,7 +20,8 @@ public class BucketDaoImpl implements BucketDao {
             Storage.buckets.add(bucket);
             return bucket;
         } else {
-            throw new NoSuchElementException("Current bucket already created");
+            update(bucket);
+            return bucket;
         }
     }
 
