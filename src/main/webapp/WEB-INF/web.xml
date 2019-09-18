@@ -5,10 +5,114 @@
          version="4.0">
     <servlet>
         <servlet-name>index</servlet-name>
-        <servlet-class>mate.acadamy.internetshop.controller.IndexController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controller.IndexController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>allUsers</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.GetAllUsersController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allUsers</servlet-name>
+        <url-pattern>/allUsers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registration</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.RegistrationContrroller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteUser</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.DeleteUserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteUser</servlet-name>
+        <url-pattern>/deleteUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testData</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.TestData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testData</servlet-name>
+        <url-pattern>/testData</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getAllItems</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.GetAllItemsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllItems</servlet-name>
+        <url-pattern>/getAllItems</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addToBucket</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.AddItemToBucket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addToBucket</servlet-name>
+        <url-pattern>/addToBucket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bucket</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.BucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bucket</servlet-name>
+        <url-pattern>/bucket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteFromBucket</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.DeleteFromBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteFromBucket</servlet-name>
+        <url-pattern>/deleteFromBucket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>completeOrder</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.CompleteOrderController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>completeOrder</servlet-name>
+        <url-pattern>/completeOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ordersList</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.OrdersListController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ordersList</servlet-name>
+        <url-pattern>/ordersList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteOrder</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.DeleteOrderController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteOrder</servlet-name>
+        <url-pattern>/deleteOrder</url-pattern>
+    </servlet-mapping>
+
+
+    <listener>
+        <listener-class>mate.academy.internetshop.controller.InjectorInitializer</listener-class>
+    </listener>
 </web-app>
