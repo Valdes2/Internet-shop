@@ -10,42 +10,54 @@
 <html>
 <head>
     <title>Bucket</title>
+    <style><%@include file="/WEB-INF/styles/w3.css"%></style>
 </head>
 <body>
-<h1>Items in bucket:</h1>
-<form action="${pageContext.request.contextPath}/getAllItems">
-    <input type="submit" value="Return to All items" />
-</form>
-<table border="2">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Remove</th>
-    </tr>
-    <c:forEach var="item" items="${items}">
-        <tr>
-            <td>
-                <c:out value="${item.id}" />
-            </td>
-            <td>
-                <c:out value="${item.name}" />
-            </td>
-            <td>
-                <c:out value="${item.price}" />
-            </td>
-            <td>
-                <a href="${pageContext.request.contextPath}/deleteFromBucket?item_id=${item.id}">Remove</a>
-            </td>
-        </tr>
-    </c:forEach>
-</table>
-<form action="${pageContext.request.contextPath}/completeOrder">
-    <input type="submit" value="Complete order" />
-</form>
-<p>**************************</p>
-<form action="${pageContext.request.contextPath}/index">
-    <input type="submit" value="Return to main page" />
-</form>
+    <div class="w3-container w3-teal">
+        <table class="w3-table w3-text-light-gray">
+            <th class="w3-left-align w3-cell-middle"><h1>Bucket</h1></th>
+            <th class="w3-right-align">
+                <form class="w3-margin-top" action="${pageContext.request.contextPath}/index">
+                    <input class="w3-btn w3-dark-gray" type="submit" value="Main" />
+                </form>
+            </th>
+        </table>
+    </div>
+    <div class="w3-container">
+        <form action="${pageContext.request.contextPath}/getAllItems">
+            <input class="w3-btn w3-dark-gray" type="submit" value="To items" />
+        </form>
+    </div>
+    <div class="w3-container">
+        <table class="w3-table w3-striped">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Remove</th>
+            </tr>
+            <c:forEach var="item" items="${items}">
+                <tr>
+                    <td>
+                        <c:out value="${item.id}" />
+                    </td>
+                    <td>
+                        <c:out value="${item.name}" />
+                    </td>
+                    <td>
+                        <c:out value="${item.price}" />
+                    </td>
+                    <td>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/deleteFromBucket?item_id=${item.id}">Remove</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <div class="w3-container">
+        <form action="${pageContext.request.contextPath}/completeOrder">
+            <input class="w3-btn w3-dark-gray" type="submit" value="Complete order" />
+        </form>
+    </div>
 </body>
 </html>

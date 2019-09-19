@@ -12,7 +12,9 @@ public interface OrderService {
 
     Order update(Order order);
 
-    void delete(Long id);
+    Order delete(Long id);
+
+    Order deleteUserOrder(Long orderId);
 
     Order completeOrder(List items, Long userId);
 }

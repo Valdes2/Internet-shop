@@ -12,15 +12,12 @@
     <title>Internetshop_v3</title>
     <style>
       <%@include file="/WEB-INF/styles/w3.css"%>
-      h1, h2, h3, h4, h5, h6 {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-      }
     </style>
 
   </head>
   <body class="w3-light-grey">
-    <div class="w3-container w3-blue-grey w3-opacity w3-left-align">
-      <h1>Main</h1>
+    <div class="w3-container w3-teal">
+      <h1 class="w3-text-light-gray">Main</h1>
     </div>
     <div class="w3-container w3-centered">
       <div class="w3-bar w3-padding-large w3-padding-24">
