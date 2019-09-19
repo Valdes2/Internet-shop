@@ -37,5 +37,8 @@
 <form action="${pageContext.request.contextPath}/index?">
     <input type="submit" value="Return to main page" />
 </form>
+<div>
+    <button onclick="location.href=/index">Back to main</button>
+</div>
 </body>
 </html>

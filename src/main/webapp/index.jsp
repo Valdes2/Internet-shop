@@ -10,26 +10,32 @@
 <html>
   <head>
     <title>Internetshop_v3</title>
+    <style><%@include file="/WEB-INF/styles/w3.css"%></style>
   </head>
   <body>
-  <h1>Main</h1>
-  <form action="${pageContext.request.contextPath}/testData">
-    <input type="submit" value="Create test data" />
-  </form>
-  <form action="${pageContext.request.contextPath}/registration">
-    <input type="submit" value="Registration" />
-  </form>
-  <form action="${pageContext.request.contextPath}/allUsers">
-    <input type="submit" value="All Users" />
-  </form>
-  <form action="${pageContext.request.contextPath}/getAllItems">
-    <input type="submit" value="All items" />
-  </form>
-  <form action="${pageContext.request.contextPath}/bucket">
-    <input type="submit" value="Bucket" />
-  </form>
-  <form action="${pageContext.request.contextPath}/ordersList">
-    <input type="submit" value="Users orders" />
-  </form>
+    <div class="w3-container w3-blue-grey w3-opacity w3-right-align">
+      <h1>Main</h1>
+    </div>
+    <div class="w3-container w3-center">
+      <form action="${pageContext.request.contextPath}/testData">
+        <input class="w3-button w3-black" type="submit" value="Create test data" />
+      </form>
+      <form action="${pageContext.request.contextPath}/registration">
+        <input type="submit" value="Registration" />
+      </form>
+      <form action="${pageContext.request.contextPath}/allUsers">
+        <input type="submit" value="All Users" />
+      </form>
+      <form action="${pageContext.request.contextPath}/getAllItems">
+        <input type="submit" value="All items" />
+      </form>
+      <form action="${pageContext.request.contextPath}/bucket">
+        <input type="submit" value="Bucket" />
+      </form>
+      <form action="${pageContext.request.contextPath}/ordersList">
+        <input type="submit" value="Users orders" />
+      </form>
+    </div>
+
   </body>
 </html>
