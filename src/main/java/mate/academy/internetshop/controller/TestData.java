@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Item;
 import mate.academy.internetshop.service.ItemService;
+import org.apache.log4j.Logger;
 
 public class TestData extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(TestData.class);
 
     @Inject
     private static ItemService itemService;
@@ -28,6 +30,7 @@ public class TestData extends HttpServlet {
         String name = req.getParameter("name");
         String price = req.getParameter("price");
         itemService.create(new Item(name, Double.valueOf(price)));
+        logger.debug("Item created");
         resp.sendRedirect(req.getContextPath() + "/testData");
 
     }
