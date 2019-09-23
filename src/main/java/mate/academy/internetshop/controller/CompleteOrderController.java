@@ -33,6 +33,6 @@ public class CompleteOrderController extends HttpServlet {
         Long userId = currentBucket.getUserId();
         orderService.completeOrder(currentBucket.getItems(), userId);
         bucketService.clear(currentBucket.getId());
-        resp.sendRedirect(req.getContextPath() + "/ordersList");
+        resp.sendRedirect(req.getContextPath() + "/servlet/ordersList");
     }
 }

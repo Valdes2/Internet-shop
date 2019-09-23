@@ -13,7 +13,6 @@ import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
 
 public class AddItemToBucket extends HttpServlet {
-    public static final int BUCKET_INDEX = 0;
 
     @Inject
     private static BucketService bucketService;
@@ -24,8 +23,9 @@ public class AddItemToBucket extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        Long userId =(Long) req.getSession(true).getAttribute("userId");
+        Long bucketId = userService.get(userId).getBucketId();
         String itemId = req.getParameter("item_id");
-        Long bucketId = Storage.buckets.get(BUCKET_INDEX).getId();
         bucketService.addItem(bucketId, Long.valueOf(itemId));
         resp.sendRedirect(req.getContextPath() + "/getAllItems");
     }

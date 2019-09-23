@@ -34,13 +34,13 @@
                 <td><c:out value="${order.id}"/></td>
                 <td><c:out value="${order.userId}"/></td>
                 <td><c:out value="${order.orderedItems}" /></td>
-                <td><a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/deleteOrder?order_id=${order.id}">Delete</a></td>
+                <td><a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteOrder?order_id=${order.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>
 </div>
 <div class="w3-container">
-    <form action="${pageContext.request.contextPath}/bucket">
+    <form action="${pageContext.request.contextPath}/servlet/bucket">
         <input class="w3-btn w3-dark-gray" type="submit" value="To bucket" />
     </form>
 </div>

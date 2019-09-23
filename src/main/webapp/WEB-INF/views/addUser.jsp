@@ -19,9 +19,13 @@
         </table>
     </div>
     <div class="w3-container">
-        <form class="w3-container" action="${pageContext.request.contextPath}/registration" method="post">
+        <form class="w3-container" action="${pageContext.request.contextPath}/addUser" method="post">
             <label class="w3-text-teal">Name
                 <input class="w3-input w3-border w3-light-grey" style="width:30%" type="text" name="name"><br />
+            </label>
+
+            <label class="w3-text-teal">Login
+                <input class="w3-input w3-border w3-light-grey" style="width:30%" type="text" name="login"><br />
             </label>
 
             <label class="w3-text-teal">Password

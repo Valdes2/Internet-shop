@@ -10,20 +10,24 @@ import javax.servlet.http.HttpServletResponse;
 import mate.academy.internetshop.db.Storage;
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.service.BucketService;
+import mate.academy.internetshop.service.UserService;
 
 public class DeleteFromBucketController extends HttpServlet {
-    public static final int BUCKET_INDEX = 0;
 
     @Inject
     private static BucketService bucketService;
 
+    @Inject
+    private static UserService userService;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        String userId = req.getParameter("item_id");
-        Long bucketId = Storage.buckets.get(BUCKET_INDEX).getId();
-        bucketService.deleteItem(bucketId, Long.valueOf(userId));
-        resp.sendRedirect(req.getContextPath() + "/bucket");
+        Long userId =(Long) req.getSession(true).getAttribute("userId");
+        Long bucketId = userService.get(userId).getBucketId();
+        String itemId = req.getParameter("item_id");
+        bucketService.deleteItem(bucketId, Long.valueOf(itemId));
+        resp.sendRedirect(req.getContextPath() + "/servlet/bucket");
 
     }
 }

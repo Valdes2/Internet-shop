@@ -18,7 +18,7 @@
         </table>
     </div>
     <div class="w3-container">
-        <form action="${pageContext.request.contextPath}/registration">
+        <form action="${pageContext.request.contextPath}/addUser">
             <input class="w3-btn w3-dark-gray" type="submit" value="Add new user" />
         </form>
     </div>
@@ -42,7 +42,7 @@
                         <c:out value="${user.password}" />
                     </td>
                     <td>
-                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/deleteUser?user_id=${user.id}">Delete</a>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteUser?user_id=${user.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

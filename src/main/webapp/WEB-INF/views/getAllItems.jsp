@@ -42,14 +42,14 @@
                         <c:out value="${item.price}" />
                     </td>
                     <td>
-                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/addToBucket?item_id=${item.id}">Add to bucket</a>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/addToBucket?item_id=${item.id}">Add to bucket</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
     </div>
     <div class="w3-container">
-        <form action="${pageContext.request.contextPath}/bucket">
+        <form action="${pageContext.request.contextPath}/servlet/bucket">
             <input class="w3-btn w3-dark-gray" type="submit" value="Go to bucket" />
         </form>
     </div>

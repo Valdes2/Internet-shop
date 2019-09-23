@@ -34,7 +34,6 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Remove</th>
             </tr>
             <c:forEach var="item" items="${items}">
                 <tr>
@@ -48,14 +47,14 @@
                         <c:out value="${item.price}" />
                     </td>
                     <td>
-                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/deleteFromBucket?item_id=${item.id}">Remove</a>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteFromBucket?item_id=${item.id}">Remove</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
     </div>
     <div class="w3-container">
-        <form action="${pageContext.request.contextPath}/completeOrder">
+        <form action="${pageContext.request.contextPath}/servlet/completeOrder">
             <input class="w3-btn w3-dark-gray" type="submit" value="Complete order" />
         </form>
     </div>
