@@ -8,13 +8,16 @@ import mate.academy.internetshop.factory.IdGenerator;
 public class User {
     private final Long id;
     private String name;
+    private String login;
     private String password;
+    private String token;
     private List<Order> orders;
     private Long bucketId;
 
-    public User(String name, String password) {
+    public User(String name, String login, String password) {
         this.id = IdGenerator.getGeneratedId();
         this.name = name;
+        this.login = login;
         this.password = password;
         this.orders = new ArrayList<>();
     }
@@ -31,12 +34,28 @@ public class User {
         this.name = name;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public List<Order> getOrders() {

@@ -4,41 +4,49 @@
 <html>
 <head>
     <title>getAllUsers</title>
+    <style><%@include file="/WEB-INF/styles/w3.css"%></style>
 </head>
 <body>
-<h1>All users:</h1>
-<form action="${pageContext.request.contextPath}/registration">
-    <input type="submit" value="Add new user" />
-</form>
-<table border="2">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Password</th>
-    </tr>
-    <c:forEach var="user" items="${users}">
-        <tr>
-            <td>
-                <c:out value="${user.id}" />
-            </td>
-            <td>
-                <c:out value="${user.name}" />
-            </td>
-            <td>
-                <c:out value="${user.password}" />
-            </td>
-            <td>
-                <a href="${pageContext.request.contextPath}/deleteUser?user_id=${user.id}">Delete</a>
-            </td>
-        </tr>
-    </c:forEach>
-</table>
-<p>**************************</p>
-<form action="${pageContext.request.contextPath}/index?">
-    <input type="submit" value="Return to main page" />
-</form>
-<div>
-    <button onclick="location.href=/index">Back to main</button>
-</div>
+    <div class="w3-container w3-teal">
+        <table class="w3-table w3-text-light-gray">
+            <th class="w3-left-align w3-cell-middle"><h1>All Users</h1></th>
+            <th class="w3-right-align">
+                <form class="w3-margin-top" action="${pageContext.request.contextPath}/index">
+                    <input class="w3-btn w3-dark-gray" type="submit" value="Main" />
+                </form>
+            </th>
+        </table>
+    </div>
+    <div class="w3-container">
+        <form action="${pageContext.request.contextPath}/addUser">
+            <input class="w3-btn w3-dark-gray" type="submit" value="Add new user" />
+        </form>
+    </div>
+    <div class="w3-container">
+        <table class="w3-table w3-striped">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+            <c:forEach var="user" items="${users}">
+                <tr>
+                    <td>
+                        <c:out value="${user.id}" />
+                    </td>
+                    <td>
+                        <c:out value="${user.name}" />
+                    </td>
+                    <td>
+                        <c:out value="${user.password}" />
+                    </td>
+                    <td>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteUser?user_id=${user.id}">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
 </body>
 </html>

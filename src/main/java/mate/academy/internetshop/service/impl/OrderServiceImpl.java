@@ -35,8 +35,18 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void delete(Long id) {
+    public Order delete(Long id) {
+        Order deletedOrder = get(id);
         orderDao.delete(id);
+        return deletedOrder;
+    }
+
+    @Override
+    public Order deleteUserOrder(Long orderId) {
+        Order order = get(orderId);
+        Long userId = orderDao.get(orderId).getUserId();
+        userDao.get(userId).getOrders().remove(order);
+        return order;
     }
 
     @Override
