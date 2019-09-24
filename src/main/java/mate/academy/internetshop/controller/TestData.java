@@ -31,7 +31,7 @@ public class TestData extends HttpServlet {
         String price = req.getParameter("price");
         itemService.create(new Item(name, Double.valueOf(price)));
         logger.debug("Item created");
-        resp.sendRedirect(req.getContextPath() + "/testData");
+        resp.sendRedirect(req.getContextPath() + "/servlet/testData");
 
     }
 }

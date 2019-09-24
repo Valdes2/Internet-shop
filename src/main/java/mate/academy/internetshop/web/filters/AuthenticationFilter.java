@@ -39,6 +39,7 @@ public class AuthenticationFilter implements Filter {
             processUnAuthenticated(req, resp);
             return;
         }
+
         for (Cookie cookies:req.getCookies()) {
             if (cookies.getName().equals("MATE")) {
                 Optional<User> user = userService.getByToken(cookies.getValue());

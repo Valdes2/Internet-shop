@@ -24,7 +24,7 @@
     </div>
     <div class="w3-container">
         <h5 class="w3-text-teal">Add Item</h5>
-        <form class="w3-container" action="${pageContext.request.contextPath}/testData" method="post">
+        <form class="w3-container" action="${pageContext.request.contextPath}/servlet/testData" method="post">
             <label class="w3-text-teal">Name
                 <input class="w3-input w3-border w3-light-grey" style="width:30%" type="text" name="name"><br/>
             </label>
