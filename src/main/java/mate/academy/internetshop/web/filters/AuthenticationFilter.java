@@ -46,12 +46,12 @@ public class AuthenticationFilter implements Filter {
                 if (user.isPresent()) {
                     logger.info("User: " + user.get().getLogin() + " was authenticated");
                     filterChain.doFilter(servletRequest, servletResponse);
-                } else {
-                    logger.info("User was not authenticated");
-                    processUnAuthenticated(req, resp);
+                    return;
                 }
             }
         }
+        logger.info("User was not authenticated");
+        processUnAuthenticated(req, resp);
 
     }
 
