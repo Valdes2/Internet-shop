@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Bucket;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
@@ -39,6 +40,13 @@ public class AddUserContrroller extends HttpServlet {
         bucketService.create(bucket);
         currentUser.setBucketId(bucket.getId());
         User user = userService.create(currentUser);
+
+        if (currentUser.getLogin().equals("admin")) {
+            currentUser.addRole(Role.of("ADMIN"));
+        } else {
+            currentUser.addRole(Role.of("USER"));
+        }
+
         resp.sendRedirect(req.getContextPath() + "/login");
 
     }

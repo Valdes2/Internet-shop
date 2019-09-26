@@ -39,18 +39,19 @@ public class AuthenticationFilter implements Filter {
             processUnAuthenticated(req, resp);
             return;
         }
+
         for (Cookie cookies:req.getCookies()) {
             if (cookies.getName().equals("MATE")) {
                 Optional<User> user = userService.getByToken(cookies.getValue());
                 if (user.isPresent()) {
                     logger.info("User: " + user.get().getLogin() + " was authenticated");
                     filterChain.doFilter(servletRequest, servletResponse);
-                } else {
-                    logger.info("User was not authenticated");
-                    processUnAuthenticated(req, resp);
+                    return;
                 }
             }
         }
+        logger.info("User was not authenticated");
+        processUnAuthenticated(req, resp);
 
     }
 

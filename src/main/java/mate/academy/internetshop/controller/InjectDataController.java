@@ -8,25 +8,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mate.academy.internetshop.lib.Inject;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
-import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
 
-public class DeleteUserController extends HttpServlet {
-
+public class InjectDataController extends HttpServlet {
     @Inject
-    private static UserService userService;
-
-    @Inject
-    private static BucketService bucketService;
+    private  static UserService userService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        String userId = req.getParameter("user_id");
-        User user = userService.get(Long.valueOf(userId));
-        userService.delete(Long.valueOf(userId));
-        bucketService.delete(user.getBucketId());
-        resp.sendRedirect(req.getContextPath() + "/servlet/allUsers");
+        User user = new User("Mike", "Van","123");
+        user.addRole(Role.of("USER"));
+        userService.create(user);
+
+        User admin = new User("Admin", "root","111");
+        admin.addRole(Role.of("ADMIN"));
+        userService.create(admin);
+
+        resp.sendRedirect(req.getContextPath() + "/index");
     }
 }
