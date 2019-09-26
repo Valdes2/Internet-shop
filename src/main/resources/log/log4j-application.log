@@ -3445,3 +3445,4 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2019-09-26 18:51:30 INFO  AuthenticationFilter:47 - User: admin was authenticated
 2019-09-26 18:51:30 DEBUG TestData:33 - Item created
 2019-09-26 18:51:30 INFO  AuthenticationFilter:47 - User: admin was authenticated
+

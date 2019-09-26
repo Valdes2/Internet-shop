@@ -148,6 +148,7 @@
     </filter-mapping>
 
     <servlet>
+
         <servlet-name>LogoutController</servlet-name>
         <servlet-class>mate.academy.internetshop.controller.LogoutController</servlet-class>
     </servlet>
