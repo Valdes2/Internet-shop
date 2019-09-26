@@ -17,11 +17,6 @@
   <div class="w3-container w3-teal">
     <table class="w3-table w3-text-light-gray">
       <th class="w3-left-align w3-cell-middle"><h1>Main</h1></th>
-        <th class="w3-right-align">
-            <form class="w3-margin-top" action="${pageContext.request.contextPath}/inject">
-                <input class="w3-btn w3-dark-gray" type="submit" value="inject" />
-            </form>
-        </th>
       <th class="w3-right-align">
         <form class="w3-margin-top" action="${pageContext.request.contextPath}/logout">
           <input class="w3-btn w3-dark-gray" type="submit" value="Logout" />
