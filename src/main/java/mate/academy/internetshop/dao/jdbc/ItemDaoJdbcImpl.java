@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 @Dao
 public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
     private static Logger logger = Logger.getLogger(ItemDaoJdbcImpl.class);
-    private static String DB_NAME = "internetshop";
+    private static final String DB_NAME = "internetshop";
 
     public ItemDaoJdbcImpl(Connection connection) {
         super(connection);
@@ -36,13 +36,13 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             preparedStatement.executeUpdate();
             return item;
         } catch (SQLException e) {
-            logger.warn("Can`t create item", e);
+            logger.error("Can`t create item", e);
         } finally {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
                 } catch (SQLException e) {
-                    logger.warn("Can`t close statement", e);
+                    logger.error("Can`t close statement", e);
                 }
             }
         }
@@ -70,13 +70,13 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
                 return item;
             }
         } catch (SQLException e) {
-            logger.warn("Can`t get item by id=" + id, e);
+            logger.error("Can`t get item by id=" + id, e);
         } finally {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
                 } catch (SQLException e) {
-                    logger.warn("Can`t close statement", e);
+                    logger.error("Can`t close statement", e);
                 }
             }
         }
@@ -98,17 +98,16 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             preparedStatement.executeUpdate();
             return item;
         } catch (SQLException e) {
-            logger.warn("Can`t update item", e);
+            logger.error("Can`t update item", e);
         } finally {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
                 } catch (SQLException e) {
-                    logger.warn("Can`t close statement", e);
+                    logger.error("Can`t close statement", e);
                 }
             }
         }
-
         return null;
     }
 
@@ -125,13 +124,13 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
             preparedStatement.executeUpdate();
             return deletedItem;
         } catch (SQLException e) {
-            logger.warn("Can`t delete item", e);
+            logger.error("Can`t delete item", e);
         } finally {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
                 } catch (SQLException e) {
-                    logger.warn("Can`t close statement", e);
+                    logger.error("Can`t close statement", e);
                 }
             }
         }
@@ -153,17 +152,16 @@ public class ItemDaoJdbcImpl extends AbstractDao<Item> implements ItemDao {
                 allItems.add(get(itemId));
             }
         } catch (SQLException e) {
-            logger.warn("Can`t get items,", e);
+            logger.error("Can`t get items,", e);
         } finally {
             if (statement != null) {
                 try {
                     statement.close();
                 } catch (SQLException e) {
-                    logger.warn("Can`t close statement", e);
+                    logger.error("Can`t close statement", e);
                 }
             }
         }
-
         return allItems;
     }
 }
