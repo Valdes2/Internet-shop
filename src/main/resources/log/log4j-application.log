@@ -3445,3 +3445,23 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2019-09-26 18:51:30 INFO  AuthenticationFilter:47 - User: admin was authenticated
 2019-09-26 18:51:30 DEBUG TestData:33 - Item created
 2019-09-26 18:51:30 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:23:51 DEBUG InjectorInitializer:15 - Injection started...
+2019-09-26 19:24:16 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:24:21 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:24:21 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:24:33 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:24:38 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:25:04 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:25:04 DEBUG TestData:33 - Item created
+2019-09-26 19:25:04 INFO  AuthenticationFilter:47 - User: admin was authenticated
+2019-09-26 19:30:56 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:00 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:01 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:02 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:03 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:03 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:04 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:04 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:06 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:06 INFO  AuthenticationFilter:47 - User: www was authenticated
+2019-09-26 19:31:07 INFO  AuthenticationFilter:47 - User: www was authenticated
