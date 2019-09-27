@@ -44,6 +44,9 @@
                     <td>
                         <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/addToBucket?item_id=${item.id}">Add to bucket</a>
                     </td>
+                    <td>
+                        <a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteItem?item_id=${item.id}">Delete</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

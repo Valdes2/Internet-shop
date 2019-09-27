@@ -58,6 +58,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>deleteItemController</servlet-name>
+        <servlet-class>mate.academy.internetshop.controller.DeleteItemController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteItemController</servlet-name>
+        <url-pattern>/servlet/deleteItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>addToBucket</servlet-name>
         <servlet-class>mate.academy.internetshop.controller.AddItemToBucket</servlet-class>
     </servlet>
@@ -139,15 +148,7 @@
     </filter-mapping>
 
     <servlet>
-        <servlet-name>injectDataController</servlet-name>
-        <servlet-class>mate.academy.internetshop.controller.InjectDataController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>injectDataController</servlet-name>
-        <url-pattern>/inject</url-pattern>
-    </servlet-mapping>
 
-    <servlet>
         <servlet-name>LogoutController</servlet-name>
         <servlet-class>mate.academy.internetshop.controller.LogoutController</servlet-class>
     </servlet>
