@@ -2,14 +2,18 @@ package mate.academy.internetshop.service.impl;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
+import mate.academy.internetshop.dao.BucketDao;
 import mate.academy.internetshop.dao.OrderDao;
+import mate.academy.internetshop.dao.RoleDao;
 import mate.academy.internetshop.dao.UserDao;
 import mate.academy.internetshop.exceptions.AuthenticationException;
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.lib.Service;
 import mate.academy.internetshop.model.Order;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.UserService;
 
@@ -21,6 +25,12 @@ public class UserServiceImpl implements UserService {
 
     @Inject
     private static OrderDao orderDao;
+
+    @Inject
+    private static RoleDao roleDao;
+
+    @Inject
+    private static BucketDao bucketDao;
 
     @Override
     public User create(User user) {
@@ -44,12 +54,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(Long id) {
-        userDao.delete(id);
+        User user = userDao.delete(id);
+        bucketDao.clear(user.getBucketId());
     }
 
     @Override
     public List<Order> getOrders(Long userId) {
-        return userDao.get(userId).getOrders();
+        return userDao.getUserOrders(userId);
     }
 
     @Override
@@ -65,5 +76,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> getByToken(String token) {
         return userDao.getByToken(token);
+    }
+
+    public void addRole(User user, Long roleId) {
+        userDao.addRole(roleId, user.getId());
+    }
+
+    @Override
+    public Set<Role> getAllRoles(Long userId) {
+        return roleDao.getAllRoles(userId);
     }
 }

@@ -8,6 +8,7 @@ import mate.academy.internetshop.dao.UserDao;
 import mate.academy.internetshop.db.Storage;
 import mate.academy.internetshop.exceptions.AuthenticationException;
 import mate.academy.internetshop.lib.Dao;
+import mate.academy.internetshop.model.Order;
 import mate.academy.internetshop.model.User;
 
 @Dao
@@ -73,5 +74,20 @@ public class UserDaoImpl implements UserDao {
     @Override
     public Optional<User> getByToken(String token) {
         return Storage.users.stream().filter(u -> u.getToken().equals(token)).findFirst();
+    }
+
+    @Override
+    public void addRole(Long roleId, Long userId) {
+
+    }
+
+    @Override
+    public void addOrder(Long orderId, Long userId) {
+
+    }
+
+    @Override
+    public List<Order> getUserOrders(Long userId) {
+        return null;
     }
 }

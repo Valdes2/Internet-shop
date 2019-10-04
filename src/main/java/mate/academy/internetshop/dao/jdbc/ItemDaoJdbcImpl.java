@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mate.academy.internetshop.dao.ItemDao;
-import mate.academy.internetshop.db.Storage;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Item;
 import org.apache.log4j.Logger;

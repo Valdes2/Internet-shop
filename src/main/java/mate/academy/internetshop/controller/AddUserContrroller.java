@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Bucket;
-import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
 
 public class AddUserContrroller extends HttpServlet {
+    private static final Long ADMIN = 1L;
+    private static final Long USER = 2L;
 
     @Inject
     public static UserService userService;
@@ -35,17 +36,17 @@ public class AddUserContrroller extends HttpServlet {
         String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("pass");
-        User currentUser = new User(name, login, password);
-        Bucket bucket = new Bucket(currentUser.getId());
-        bucketService.create(bucket);
-        currentUser.setBucketId(bucket.getId());
-        User user = userService.create(currentUser);
-
-        if (currentUser.getLogin().equals("admin")) {
-            currentUser.addRole(Role.of("ADMIN"));
+        User newUser = new User(name, login, password);
+        newUser = userService.create(newUser);
+        if (newUser.getLogin().equals("admin")) {
+            userService.addRole(newUser, ADMIN);
         } else {
-            currentUser.addRole(Role.of("USER"));
+            userService.addRole(newUser, USER);
         }
+
+        Bucket bucket = bucketService.create(new Bucket(newUser.getId()));
+        newUser.setBucketId(bucket.getId());
+        userService.update(newUser);
 
         resp.sendRedirect(req.getContextPath() + "/login");
 
