@@ -6,6 +6,7 @@ import java.util.Map;
 import mate.academy.internetshop.dao.BucketDao;
 import mate.academy.internetshop.dao.ItemDao;
 import mate.academy.internetshop.dao.OrderDao;
+import mate.academy.internetshop.dao.RoleDao;
 import mate.academy.internetshop.dao.UserDao;
 import mate.academy.internetshop.factory.Factory;
 import mate.academy.internetshop.service.BucketService;
@@ -21,6 +22,7 @@ public class AnnotatedClassMap {
         classesFields.put(ItemDao.class, Factory.getItemDao());
         classesFields.put(OrderDao.class, Factory.getOrderDao());
         classesFields.put(UserDao.class, Factory.getUserDao());
+        classesFields.put(RoleDao.class,Factory.getRoleDao());
         classesFields.put(BucketService.class, Factory.getBucketService());
         classesFields.put(ItemService.class, Factory.getItemService());
         classesFields.put(OrderService.class, Factory.getOrderService());

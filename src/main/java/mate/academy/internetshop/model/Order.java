@@ -2,15 +2,12 @@ package mate.academy.internetshop.model;
 
 import java.util.List;
 
-import mate.academy.internetshop.factory.IdGenerator;
-
 public class Order {
-    private final Long id;
+    private Long id;
     private Long userId;
     private List<Item> orderedItems;
 
     public Order(Long userId, List<Item> items) {
-        this.id = IdGenerator.getGeneratedId();
         this.userId = userId;
         this.orderedItems = items;
     }
@@ -19,8 +16,20 @@ public class Order {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getUserId() {
         return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public void setOrderedItems(List<Item> orderedItems) {
+        this.orderedItems = orderedItems;
     }
 
     public List<Item> getOrderedItems() {

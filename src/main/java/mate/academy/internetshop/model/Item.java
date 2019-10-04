@@ -1,15 +1,12 @@
 package mate.academy.internetshop.model;
 
-import mate.academy.internetshop.factory.IdGenerator;
-
 public class  Item {
-    private final Long id;
+    private Long id;
     private String name;
     private Double price;
     private String description;
 
     public Item(String name, Double price) {
-        this.id = IdGenerator.getGeneratedId();
         this.name = name;
         this.price = price;
     }
@@ -20,6 +17,10 @@ public class  Item {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
