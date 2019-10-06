@@ -32,6 +32,7 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("pass");
+
         try {
             User user = userService.login(login,password);
             HttpSession newSession = req.getSession(true);

@@ -77,6 +77,11 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public byte[] getSaltByLogin(String login) {
+        return new byte[0];
+    }
+
+    @Override
     public void addRole(Long roleId, Long userId) {
 
     }
