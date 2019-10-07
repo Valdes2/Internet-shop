@@ -29,7 +29,10 @@ public class TestData extends HttpServlet {
             throws ServletException, IOException {
         String name = req.getParameter("name");
         String price = req.getParameter("price");
-        itemService.create(new Item(name, Double.valueOf(price)));
+        Item newItem = new Item();
+        newItem.setName(name);
+        newItem.setPrice(Double.valueOf(price));
+        itemService.create(newItem);
         logger.debug("Item created");
         resp.sendRedirect(req.getContextPath() + "/servlet/testData");
 
