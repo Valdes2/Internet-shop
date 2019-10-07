@@ -11,6 +11,7 @@ public class User {
     private String login;
     private String password;
     private String token;
+    private byte[] salt;
     private List<Order> orders;
     private Long bucketId;
     private Set<Role> roles = new HashSet<>();
@@ -60,6 +61,14 @@ public class User {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public byte[] getSalt() {
+        return salt;
+    }
+
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
     }
 
     public List<Order> getOrders() {

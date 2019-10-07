@@ -12,6 +12,7 @@ import mate.academy.internetshop.model.Bucket;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
+import mate.academy.internetshop.util.HashUtil;
 
 public class AddUserContrroller extends HttpServlet {
     private static final Long ADMIN = 1L;
@@ -36,7 +37,10 @@ public class AddUserContrroller extends HttpServlet {
         String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("pass");
-        User newUser = new User(name, login, password);
+        byte[] salt = HashUtil.getSalt();
+        String hashPass = HashUtil.hashPassword(password, salt);
+        User newUser = new User(name, login, hashPass);
+        newUser.setSalt(salt);
         newUser = userService.create(newUser);
         if (newUser.getLogin().equals("admin")) {
             userService.addRole(newUser, ADMIN);

@@ -101,4 +101,6 @@ CREATE TABLE `internetshop`.`users_orders` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-
+ALTER TABLE `internetshop`.`users`
+ADD COLUMN `salt` BLOB NOT NULL AFTER `password`,
+CHANGE COLUMN `password` `password` VARCHAR(256) NOT NULL ;

@@ -16,6 +16,7 @@ import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Order;
 import mate.academy.internetshop.model.User;
+import mate.academy.internetshop.util.HashUtil;
 import org.apache.log4j.Logger;
 
 @Dao
@@ -32,13 +33,15 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
 
     @Override
     public User create(User user) {
-        String query = "INSERT INTO users(name, login, password, token) VALUES (?, ?, ?, ?);";
+        String query
+                = "INSERT INTO users(name, login, password, salt, token) VALUES (?, ?, ?, ?, ?);";
         try (PreparedStatement preparedStatement
                      = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getLogin());
             preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setString(4, user.getToken());
+            preparedStatement.setBytes(4, user.getSalt());
+            preparedStatement.setString(5, user.getToken());
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             while (resultSet.next()) {
@@ -64,6 +67,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
                 User user = new User(name, login, pass);
                 user.setId(resultSet.getLong("user_id"));
                 user.setBucketId(resultSet.getLong("bucket_id"));
+                user.setSalt(resultSet.getBytes("salt"));
                 user.setToken(resultSet.getString("token"));
                 user.setOrders(getUserOrders(id));
                 return user;
@@ -127,16 +131,32 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
 
     @Override
     public User login(String login, String password) throws AuthenticationException {
+        String getSaltQuery = "SELECT salt FROM users WHERE login = ?;";
+        byte[] salt = new byte[0];
+        try (PreparedStatement preparedStatement = connection.prepareStatement(getSaltQuery)) {
+            preparedStatement.setString(1, login);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                salt = resultSet.getBytes("salt");
+            }
+        } catch (SQLException e) {
+            logger.error("Can`t get salt by login: " + login);
+            return null;
+        }
+
         String query = "SELECT * FROM users where login = ? AND password = ?;";
+        String hashPass = HashUtil.hashPassword(password, salt);
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, login);
-            preparedStatement.setString(2, password);
+            preparedStatement.setString(2, hashPass);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String name = resultSet.getString("name");
                 String loginFromDB = resultSet.getString("login");
                 String passFromDB = resultSet.getString("password");
-                if (!login.equals(loginFromDB) || !password.equals(passFromDB)) {
+                byte[] saltFromDB = resultSet.getBytes("salt");
+                if (!login.equals(loginFromDB)
+                        || !HashUtil.hashPassword(password, saltFromDB).equals(passFromDB)) {
                     throw new AuthenticationException("incorrect login or password");
                 }
                 User user = new User(name, login, password);
