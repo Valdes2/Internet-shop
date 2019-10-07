@@ -131,8 +131,21 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
 
     @Override
     public User login(String login, String password) throws AuthenticationException {
+        String getSaltQuery = "SELECT salt FROM users WHERE login = ?;";
+        byte[] salt = new byte[0];
+        try (PreparedStatement preparedStatement = connection.prepareStatement(getSaltQuery)) {
+            preparedStatement.setString(1, login);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                salt = resultSet.getBytes("salt");
+            }
+        } catch (SQLException e) {
+            logger.error("Can`t get salt by login: " + login);
+            return null;
+        }
+
         String query = "SELECT * FROM users where login = ? AND password = ?;";
-        String hashPass = HashUtil.hashPassword(password, getSaltByLogin(login));
+        String hashPass = HashUtil.hashPassword(password, salt);
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, login);
             preparedStatement.setString(2, hashPass);
@@ -178,22 +191,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
             logger.error("Can`t find token", e);
         }
         return Optional.empty();
-    }
-
-    public byte[] getSaltByLogin(String login) {
-        String query = "SELECT salt FROM users WHERE login = ?;";
-        byte[] salt = new byte[0];
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, login);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                salt = resultSet.getBytes("salt");
-            }
-            return salt;
-        } catch (SQLException e) {
-            logger.error("Can`t get salt by login: " + login);
-            return null;
-        }
     }
 
     @Override
