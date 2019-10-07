@@ -23,8 +23,6 @@ public interface UserDao {
 
     Optional<User> getByToken(String token);
 
-    byte[] getSaltByLogin(String login);
-
     void addRole(Long roleId, Long userId);
 
     void addOrder(Long orderId, Long userId);
