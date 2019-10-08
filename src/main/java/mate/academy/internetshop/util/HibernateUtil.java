@@ -25,5 +25,4 @@ public class HibernateUtil {
             throw new RuntimeException(e);
         }
     }
-
 }

@@ -8,6 +8,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -70,7 +71,7 @@ public class ItemDaoHibernateImpl implements ItemDao {
 
     @Override
     public List<Item> getAll() {
-        List<Item> allItems = null;
+        List<Item> allItems = new ArrayList<>();
         try(Session session = HibernateUtil.sessionFactory().openSession()) {
             Criteria criteria = session.createCriteria(Item.class);
             allItems = criteria.list();
