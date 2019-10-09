@@ -78,6 +78,7 @@ public class UserServiceImpl implements UserService {
         return userDao.getByToken(token);
     }
 
+    @Override
     public void addRole(User user, Long roleId) {
         userDao.addRole(roleId, user.getId());
     }
