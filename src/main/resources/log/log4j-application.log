@@ -7633,3 +7633,1471 @@ org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wron
 2019-10-07 22:00:56 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#18]
 2019-10-07 22:00:56 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
 2019-10-07 22:01:14 DEBUG DriverManagerConnectionProviderImpl:249 - Connection pool now considered primed; min-size will be maintained
+2019-10-09 22:09:18 DEBUG InjectorInitializer:15 - Injection started...
+2019-10-09 22:09:18 DEBUG logging:28 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2019-10-09 22:09:18 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2019-10-09 22:09:18 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2019-10-09 22:09:18 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2019-10-09 22:09:19 INFO  Version:46 - HHH000412: Hibernate Core {5.4.5.Final}
+2019-10-09 22:09:19 DEBUG Environment:199 - HHH000206: hibernate.properties not found
+2019-10-09 22:09:19 DEBUG LocalXmlResourceResolver:57 - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd]
+2019-10-09 22:09:19 WARN  deprecation:91 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2019-10-09 22:09:19 DEBUG LocalXmlResourceResolver:95 - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+2019-10-09 22:09:19 DEBUG JaxbCfgProcessor:116 - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2019-10-09 22:09:19 DEBUG Configuration:722 - Building session factory using internal StandardServiceRegistryBuilder
+2019-10-09 22:09:19 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2019-10-09 22:09:19 DEBUG Configuration:652 - Building session factory using provided StandardServiceRegistry
+2019-10-09 22:09:19 DEBUG RegionFactoryInitiator:118 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2019-10-09 22:09:19 DEBUG RegionFactoryInitiator:49 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2019-10-09 22:09:19 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@71bcfe08
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@71bcfe08
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@71bcfe08
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@74e657ac
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@268521e3
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration yes_no -> org.hibernate.type.YesNoType@2e2b0bc5
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@184c4375
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@184c4375
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@184c4375
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration character -> org.hibernate.type.CharacterType@53fa0895
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration char -> org.hibernate.type.CharacterType@53fa0895
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@53fa0895
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@7399afac
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@7399afac
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7399afac
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration integer -> org.hibernate.type.IntegerType@91851d3
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration int -> org.hibernate.type.IntegerType@91851d3
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@91851d3
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@2fd2e042
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@2fd2e042
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2fd2e042
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@5e723c40
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@5e723c40
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@5e723c40
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@6a47fedc
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@6a47fedc
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@6a47fedc
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6da69d64
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6da69d64
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7f9b16a1
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7f9b16a1
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration string -> org.hibernate.type.StringType@4f665056
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.String -> org.hibernate.type.StringType@4f665056
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@56c4e945
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@173dfaa2
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration url -> org.hibernate.type.UrlType@54e2e498
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@54e2e498
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration Duration -> org.hibernate.type.DurationType@311fa337
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@311fa337
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration Instant -> org.hibernate.type.InstantType@443de5a4
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@443de5a4
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@5d77c176
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@5d77c176
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7a7ca658
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7a7ca658
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@68062cc9
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@68062cc9
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@793d7609
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@793d7609
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5beb8a95
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5beb8a95
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@76ab9f7
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@76ab9f7
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration date -> org.hibernate.type.DateType@22e358b8
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@22e358b8
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration time -> org.hibernate.type.TimeType@36363d9c
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@36363d9c
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration timestamp -> org.hibernate.type.TimestampType@33c407fa
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@33c407fa
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@33c407fa
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@55cdd871
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration calendar -> org.hibernate.type.CalendarType@72df6711
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@72df6711
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@72df6711
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@721a5ba5
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration locale -> org.hibernate.type.LocaleType@6c84c31d
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6c84c31d
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration currency -> org.hibernate.type.CurrencyType@3da07681
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@3da07681
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@54d13d49
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@54d13d49
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration class -> org.hibernate.type.ClassType@797d56ed
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@797d56ed
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@68192daf
+2019-10-09 22:09:19 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@68192daf
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@3d2c3681
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration binary -> org.hibernate.type.BinaryType@e762aa
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration byte[] -> org.hibernate.type.BinaryType@e762aa
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration [B -> org.hibernate.type.BinaryType@e762aa
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@7774ea74
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@7774ea74
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@7774ea74
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration row_version -> org.hibernate.type.RowVersionType@25dd269b
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration image -> org.hibernate.type.ImageType@222160d0
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration characters -> org.hibernate.type.CharArrayType@24ca5618
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration char[] -> org.hibernate.type.CharArrayType@24ca5618
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration [C -> org.hibernate.type.CharArrayType@24ca5618
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@4e707621
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@4e707621
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@4e707621
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration text -> org.hibernate.type.TextType@f52042b
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration ntext -> org.hibernate.type.NTextType@596dc848
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration blob -> org.hibernate.type.BlobType@6ce17236
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6ce17236
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@64601b07
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration clob -> org.hibernate.type.ClobType@6909aaf4
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6909aaf4
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration nclob -> org.hibernate.type.NClobType@62e1c6c1
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@62e1c6c1
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@5f675df2
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3d85412b
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration serializable -> org.hibernate.type.SerializableType@53707cdb
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration object -> org.hibernate.type.ObjectType@7c296d04
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7c296d04
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6a876741
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@29e517c7
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5eddcd4f
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@87fe262
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@59132143
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@58495e89
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@684e577a
+2019-10-09 22:09:20 DEBUG BasicTypeRegistry:156 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1f55d4e3
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-10-09 22:09:20 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2019-10-09 22:09:20 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-10-09 22:09:20 INFO  pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost/internetshop?serverTimezone=UTC]
+2019-10-09 22:09:20 INFO  pooling:121 - HHH10001001: Connection properties: {password=1234, user=Valdes}
+2019-10-09 22:09:20 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2019-10-09 22:09:20 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+2019-10-09 22:09:20 INFO  DriverManagerConnectionProviderImpl:239 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-10-09 22:09:20 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : MySQL
+    version : 8.0.17
+      major : 8
+      minor : 0
+2019-10-09 22:09:20 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.17 (Revision: 16a712ddb3f826a1933ab42b0039f7fb9eebc6ec)
+      major : 8
+      minor : 0
+2019-10-09 22:09:20 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 4.2
+2019-10-09 22:09:20 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-09 22:09:20 DEBUG IdentifierHelperBuilder:113 - JDBC driver metadata reported database stores quoted identifiers in more than one case
+2019-10-09 22:09:20 DEBUG IdentifierHelperBuilder:187 - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2019-10-09 22:09:20 DEBUG Namespace:51 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2019-10-09 22:09:20 DEBUG TypeConfiguration$Scope:152 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7d2923ba] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2a04f2f]
+2019-10-09 22:09:20 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mate.academy.internetshop.model.Item
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-09 22:09:20 DEBUG EntityBinder:430 - Import with entity name Item
+2019-10-09 22:09:20 DEBUG EntityBinder:873 - Bind entity mate.academy.internetshop.model.Item on table items
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=item_id, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Item:id]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for id
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property id
+2019-10-09 22:09:20 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(item_id)]), id, identity, , ...)
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property description with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Item:description]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for description
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property description
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property name with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Item:name]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for name
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property name
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(items), mappingColumn=price, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property price with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Item:price]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for price
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property price
+2019-10-09 22:09:20 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mate.academy.internetshop.model.Role
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-09 22:09:20 DEBUG EntityBinder:430 - Import with entity name Role
+2019-10-09 22:09:20 DEBUG EntityBinder:873 - Bind entity mate.academy.internetshop.model.Role on table roles
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(roles), mappingColumn=role_id, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Role:id]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for id
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property id
+2019-10-09 22:09:20 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(role_id)]), id, identity, , ...)
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(roles), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property roleName with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.Role:roleName]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for roleName
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property roleName
+2019-10-09 22:09:20 DEBUG AnnotationBinder:557 - Binding entity from annotated class: mate.academy.internetshop.model.User
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-10-09 22:09:20 DEBUG EntityBinder:430 - Import with entity name User
+2019-10-09 22:09:20 DEBUG EntityBinder:873 - Bind entity mate.academy.internetshop.model.User on table users
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=user_id, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:id]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for id
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property id
+2019-10-09 22:09:20 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(user_id)]), id, identity, , ...)
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=login, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property login with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:login]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for login
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property login
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property name with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:name]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for name
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property name
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=password, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property password with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:password]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for password
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property password
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=roles_KEY, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='roles_KEY', referencedColumn='null', mappedBy='null'}
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='user_id', referencedColumn='user_id', mappedBy=''}
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='role_id', referencedColumn='role_id', mappedBy=''}
+2019-10-09 22:09:20 DEBUG CollectionBinder:450 - Collection role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property roles
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=salt, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property salt with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:salt]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for salt
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property salt
+2019-10-09 22:09:20 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=token, insertable=true, updatable=true, unique=false}
+2019-10-09 22:09:20 DEBUG PropertyBinder:175 - MetadataSourceProcessor property token with lazy=false
+2019-10-09 22:09:20 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [mate.academy.internetshop.model.User:token]
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:411 - building SimpleValue for token
+2019-10-09 22:09:20 DEBUG PropertyBinder:266 - Building property token
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for id
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for description
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for name
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for price
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for id
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for roleName
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for id
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for login
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for name
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for password
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for salt
+2019-10-09 22:09:20 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for token
+2019-10-09 22:09:20 DEBUG PrimaryKey:35 - Forcing column [item_id] to be non-null as it is part of the primary key for table [items]
+2019-10-09 22:09:20 DEBUG PrimaryKey:35 - Forcing column [role_id] to be non-null as it is part of the primary key for table [roles]
+2019-10-09 22:09:20 DEBUG PrimaryKey:35 - Forcing column [user_id] to be non-null as it is part of the primary key for table [users]
+2019-10-09 22:09:20 DEBUG CollectionSecondPass:50 - Second pass for collection: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:20 DEBUG CollectionBinder:1319 - Binding as ManyToMany: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:20 DEBUG PrimaryKey:35 - Forcing column [user_id] to be non-null as it is part of the primary key for table [users_roles]
+2019-10-09 22:09:20 DEBUG PrimaryKey:35 - Forcing column [role_id] to be non-null as it is part of the primary key for table [users_roles]
+2019-10-09 22:09:20 DEBUG CollectionSecondPass:67 - Mapped collection key: user_id, element: role_id
+2019-10-09 22:09:20 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mate.academy.internetshop.model.Role
+2019-10-09 22:09:20 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mate.academy.internetshop.model.User
+2019-10-09 22:09:20 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mate.academy.internetshop.model.Role
+2019-10-09 22:09:20 DEBUG InFlightMetadataCollectorImpl:1860 - Resolving reference to class: mate.academy.internetshop.model.User
+2019-10-09 22:09:20 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:20 DEBUG SessionFactoryImpl:207 - Building session factory
+2019-10-09 22:09:20 DEBUG Settings:68 - SessionFactory name : null
+2019-10-09 22:09:20 DEBUG Settings:69 - Automatic flush during beforeCompletion(): enabled
+2019-10-09 22:09:20 DEBUG Settings:70 - Automatic session close at end of transaction: disabled
+2019-10-09 22:09:20 DEBUG Settings:72 - Statistics: disabled
+2019-10-09 22:09:20 DEBUG Settings:74 - Deleted entity synthetic identifier rollback: disabled
+2019-10-09 22:09:20 DEBUG Settings:75 - Default entity-mode: pojo
+2019-10-09 22:09:20 DEBUG Settings:76 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2019-10-09 22:09:20 DEBUG Settings:77 - Allow initialization of lazy state outside session : disabled
+2019-10-09 22:09:20 DEBUG Settings:80 - Default batch fetch size: -1
+2019-10-09 22:09:20 DEBUG Settings:81 - Maximum outer join fetch depth: 2
+2019-10-09 22:09:20 DEBUG Settings:82 - Default null ordering: NONE
+2019-10-09 22:09:20 DEBUG Settings:83 - Order SQL updates by primary key: disabled
+2019-10-09 22:09:20 DEBUG Settings:84 - Order SQL inserts for batching: disabled
+2019-10-09 22:09:20 DEBUG Settings:86 - multi-tenancy strategy : NONE
+2019-10-09 22:09:20 DEBUG Settings:88 - JTA Track by Thread: enabled
+2019-10-09 22:09:20 DEBUG Settings:90 - Query language substitutions: {}
+2019-10-09 22:09:20 DEBUG Settings:91 - Named query checking : enabled
+2019-10-09 22:09:20 DEBUG Settings:93 - Second-level cache: disabled
+2019-10-09 22:09:20 DEBUG Settings:94 - Second-level query cache: disabled
+2019-10-09 22:09:20 DEBUG Settings:95 - Second-level query cache factory: null
+2019-10-09 22:09:20 DEBUG Settings:96 - Second-level cache region prefix: null
+2019-10-09 22:09:20 DEBUG Settings:97 - Optimize second-level cache for minimal puts: disabled
+2019-10-09 22:09:20 DEBUG Settings:98 - Structured second-level cache entries: disabled
+2019-10-09 22:09:20 DEBUG Settings:99 - Second-level cache direct-reference entries: disabled
+2019-10-09 22:09:20 DEBUG Settings:100 - Automatic eviction of collection cache: disabled
+2019-10-09 22:09:20 DEBUG Settings:102 - JDBC batch size: 15
+2019-10-09 22:09:20 DEBUG Settings:103 - JDBC batch updates for versioned data: enabled
+2019-10-09 22:09:20 DEBUG Settings:104 - Scrollable result sets: enabled
+2019-10-09 22:09:20 DEBUG Settings:105 - Wrap result sets: disabled
+2019-10-09 22:09:20 DEBUG Settings:106 - JDBC3 getGeneratedKeys(): enabled
+2019-10-09 22:09:20 DEBUG Settings:107 - JDBC result set fetch size: null
+2019-10-09 22:09:20 DEBUG Settings:108 - Connection release mode: AFTER_TRANSACTION
+2019-10-09 22:09:20 DEBUG Settings:109 - Generate SQL with comments: disabled
+2019-10-09 22:09:20 DEBUG Settings:111 - JPA compliance - query : 
+2019-10-09 22:09:20 DEBUG Settings:112 - JPA compliance - closed-handling : 
+2019-10-09 22:09:20 DEBUG Settings:113 - JPA compliance - lists : 
+2019-10-09 22:09:20 DEBUG Settings:114 - JPA compliance - transactions : 
+2019-10-09 22:09:20 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:20 DEBUG SessionFactoryImpl:262 - Session factory constructed with filter configurations : {}
+2019-10-09 22:09:20 DEBUG SessionFactoryImpl:263 - Instantiating session factory with properties: {awt.toolkit=sun.awt.windows.WToolkit, java.specification.version=11, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, sun.arch.data.model=64, hbm2ddl.auto=validate, java.vendor.url=http://java.oracle.com/, catalina.useNaming=true, user.country.format=UA, sun.boot.library.path=C:\Program Files\Java\jdk-11.0.2\bin, com.sun.management.jmxremote.ssl=false, sun.java.command=org.apache.catalina.startup.Bootstrap start, jdk.debug=release, java.specification.vendor=Oracle Corporation, java.naming.factory.url.pkgs=org.apache.naming, java.version.date=2019-01-15, java.home=C:\Program Files\Java\jdk-11.0.2, ignore.endorsed.dirs=, file.separator=\, java.vm.compressedOopsMode=32-bit, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, intellij.debug.agent=true, com.sun.management.jmxremote.password.file=C:\Users\valde\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_v3_6\jmxremote.password, package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat., jdk.tls.ephemeralDHKeySize=2048, hibernate.hbm2ddl.auto=validate, user.script=, java.util.logging.config.file=C:\Users\valde\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_v3_6\conf\logging.properties, java.protocol.handler.pkgs=org.apache.catalina.webresources, connection.password=1234, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.2+9, user.name=valde, file.encoding=Cp1251, java.vendor.version=18.9, show_sql=true, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.io.tmpdir=C:\apache-tomcat-9.0.22\temp, tomcat.util.scan.StandardJarScanFilter.jarsToScan=log4j-taglib*.jar,log4j-web*.jar,log4javascript*.jar,slf4j-taglib*.jar, java.version=11.0.2, com.sun.management.jmxremote.port=1099, jboss.modules.system.pkgs=com.intellij.rt, tomcat.util.scan.StandardJarScanFilter.jarsToSkip=annotations-api.jar,ant-junit*.jar,ant-launcher.jar,ant.jar,asm-*.jar,aspectj*.jar,bootstrap.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,catalina.jar,cglib-*.jar,cobertura-*.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-daemon.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,dom4j-*.jar,easymock-*.jar,ecj-*.jar,el-api.jar,geronimo-spec-jaxrpc*.jar,h2*.jar,hamcrest-*.jar,hibernate*.jar,httpclient*.jar,icu4j-*.jar,jasper-el.jar,jasper.jar,jaspic-api.jar,jaxb-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,jmx-tools.jar,jmx.jar,jsp-api.jar,jstl.jar,jta*.jar,junit-*.jar,junit.jar,log4j*.jar,mail*.jar,objenesis-*.jar,oraclepki.jar,oro-*.jar,servlet-api-*.jar,servlet-api.jar,slf4j*.jar,taglibs-standard-spec-*.jar,tagsoup-*.jar,tomcat-api.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-i18n-*.jar,tomcat-jdbc.jar,tomcat-jni.jar,tomcat-juli-adapters.jar,tomcat-juli.jar,tomcat-util-scan.jar,tomcat-util.jar,tomcat-websocket.jar,tools.jar,websocket-api.jar,wsdl4j*.jar,xercesImpl.jar,xml-apis.jar,xmlParserAPIs-*.jar,xmlParserAPIs.jar,xom-*.jar, connection.username=Valdes, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, connection.driver_class=com.mysql.cj.jdbc.Driver, java.library.path=C:\Program Files\Java\jdk-11.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\SQLite;C:\Users\valde\AppData\Local\GitHubDesktop\app-2.1.0\resources\app\git\cmd;C:\Program Files\Java\jdk-11.0.2\bin;C:\apache-maven-3.6.1\bin;C:\apache-tomcat-9.0.22\bin;C:\Users\valde\AppData\Local\Microsoft\WindowsApps;C:\Users\valde\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;., java.vendor=Oracle Corporation, java.rmi.server.randomIDs=true, sun.io.unicode.encoding=UnicodeLittle, tomcat.util.buf.StringCache.byte.enabled=true, sun.desktop=windows, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=C:\apache-tomcat-9.0.22\bin\bootstrap.jar;C:\apache-tomcat-9.0.22\bin\tomcat-juli.jar, java.vm.vendor=Oracle Corporation, user.variant=, user.timezone=Europe/Helsinki, os.name=Windows 10, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=RU, com.sun.management.jmxremote=, sun.cpu.endian=little, user.home=C:\Users\valde, user.language=ru, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat., server.loader=, com.sun.management.jmxremote.access.file=C:\Users\valde\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_v3_6\jmxremote.access, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, path.separator=;, common.loader="C:/apache-tomcat-9.0.22/lib","C:/apache-tomcat-9.0.22/lib/*.jar","C:\apache-tomcat-9.0.22/lib","C:\apache-tomcat-9.0.22/lib/*.jar", hibernate.connection.username=****, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost/internetshop?serverTimezone=UTC, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, java.vendor.url.bug=http://bugreport.java.com/bugreport/, catalina.home=C:\apache-tomcat-9.0.22, user.dir=C:\apache-tomcat-9.0.22\bin, os.arch=amd64, hibernate.connection.password=****, catalina.base=C:\Users\valde\.IntelliJIdea2019.2\system\tomcat\Unnamed_internetshop_v3_6, shared.loader=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@703d1f75, java.util.logging.manager=org.apache.juli.ClassLoaderLogManager, java.vm.info=mixed mode, java.vm.version=11.0.2+9, hibernate.bytecode.use_reflection_optimizer=false, java.rmi.server.hostname=127.0.0.1, connection.url=jdbc:mysql://localhost/internetshop?serverTimezone=UTC, java.class.version=55.0}
+2019-10-09 22:09:20 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+2019-10-09 22:09:20 DEBUG SessionFactoryImpl:302 - Instantiated session factory
+2019-10-09 22:09:20 DEBUG TypeConfiguration$Scope:157 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7d2923ba] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@800e95f]
+2019-10-09 22:09:20 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.Role] is safe
+2019-10-09 22:09:20 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.Role
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.Role] is safe
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.Role
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.Item] is safe
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.Item
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.Item] is safe
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.Item
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.User] is safe
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.User
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [mate.academy.internetshop.model.User] is safe
+2019-10-09 22:09:21 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : mate.academy.internetshop.model.User
+2019-10-09 22:09:21 DEBUG AbstractCollectionPersister:689 - Static SQL for collection: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:21 DEBUG AbstractCollectionPersister:691 -  Row insert: insert into users_roles (user_id, role_id) values (?, ?)
+2019-10-09 22:09:21 DEBUG AbstractCollectionPersister:694 -  Row update: update users_roles set role_id=? where user_id=? and role_id=?
+2019-10-09 22:09:21 DEBUG AbstractCollectionPersister:697 -  Row delete: delete from users_roles where user_id=? and role_id=?
+2019-10-09 22:09:21 DEBUG AbstractCollectionPersister:700 -  One-shot delete: delete from users_roles where user_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mate.academy.internetshop.model.Role
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3823 -  Version select: select role_id from roles where role_id =?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select role_.role_id, role_.name as name2_1_ from roles role_ where role_.role_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into roles (name, role_id) values (?, ?)
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Update 0: update roles set name=? where role_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from roles where role_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into roles (name) values (?)
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@625c7ac6]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.Role, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_1_0_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.Role [NONE]: select role0_.role_id as role_id1_1_0_, role0_.name as name2_1_0_ from roles role0_ where role0_.role_id=?
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@30a4a1c9]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.Role)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.Role, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.Role)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.Role)
+          - SQL table alias mapping - role0_
+          - alias suffix - 0_
+          - suffixed key columns - {role_id1_1_0_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.Role [READ]: select role0_.role_id as role_id1_1_0_, role0_.name as name2_1_0_ from roles role0_ where role0_.role_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mate.academy.internetshop.model.Role: select role0_.role_id as role_id1_1_0_, role0_.name as name2_1_0_ from roles role0_ where role0_.role_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mate.academy.internetshop.model.Role: select role0_.role_id as role_id1_1_0_, role0_.name as name2_1_0_ from roles role0_ where role0_.role_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mate.academy.internetshop.model.Item
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3823 -  Version select: select item_id from items where item_id =?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select item_.item_id, item_.description as descript2_0_, item_.name as name3_0_, item_.price as price4_0_ from items item_ where item_.item_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into items (description, name, price, item_id) values (?, ?, ?, ?)
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Update 0: update items set description=?, name=?, price=? where item_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from items where item_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into items (description, name, price) values (?, ?, ?)
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@54122127]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : description
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.Item)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.Item, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {item_id1_0_0_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.Item [NONE]: select item0_.item_id as item_id1_0_0_, item0_.description as descript2_0_0_, item0_.name as name3_0_0_, item0_.price as price4_0_0_ from items item0_ where item0_.item_id=?
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@430835c2]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : description
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : price
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.Item)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.Item, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.Item)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.Item)
+          - SQL table alias mapping - item0_
+          - alias suffix - 0_
+          - suffixed key columns - {item_id1_0_0_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.Item [READ]: select item0_.item_id as item_id1_0_0_, item0_.description as descript2_0_0_, item0_.name as name3_0_0_, item0_.price as price4_0_0_ from items item0_ where item0_.item_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mate.academy.internetshop.model.Item: select item0_.item_id as item_id1_0_0_, item0_.description as descript2_0_0_, item0_.name as name3_0_0_, item0_.price as price4_0_0_ from items item0_ where item0_.item_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mate.academy.internetshop.model.Item: select item0_.item_id as item_id1_0_0_, item0_.description as descript2_0_0_, item0_.name as name3_0_0_, item0_.price as price4_0_0_ from items item0_ where item0_.item_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3818 - Static SQL for entity: mate.academy.internetshop.model.User
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3823 -  Version select: select user_id from users where user_id =?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3826 -  Snapshot select: select user_.user_id, user_.login as login2_2_, user_.name as name3_2_, user_.password as password4_2_, user_.salt as salt5_2_, user_.token as token6_2_ from users user_ where user_.user_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into users (login, name, password, salt, token, user_id) values (?, ?, ?, ?, ?, ?)
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Update 0: update users set login=?, name=?, password=?, salt=?, token=? where user_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from users where user_id=?
+2019-10-09 22:09:21 DEBUG AbstractEntityPersister:3834 -  Identity insert: insert into users (login, name, password, salt, token) values (?, ?, ?, ?, ?)
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7977da16]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : login
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : password
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7864cc5d]
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@500170d0]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles.roleName
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : salt
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : token
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.User)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.User, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.User)
+          - CollectionAttributeFetchImpl(collection=mate.academy.internetshop.model.User.roles, querySpaceUid=<gen:1>, path=mate.academy.internetshop.model.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mate.academy.internetshop.model.Role, querySpaceUid=<gen:2>, path=mate.academy.internetshop.model.User.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(roles)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mate.academy.internetshop.model.User.roles)
+                - SQL table alias mapping - roles1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id1_3_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - role_id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mate.academy.internetshop.model.Role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_1_2_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.User [NONE]: select user0_.user_id as user_id1_2_0_, user0_.login as login2_2_0_, user0_.name as name3_2_0_, user0_.password as password4_2_0_, user0_.salt as salt5_2_0_, user0_.token as token6_2_0_, roles1_.user_id as user_id1_3_1_, role2_.role_id as role_id2_3_1_, role2_.role_id as role_id1_1_2_, role2_.name as name2_1_2_ from users user0_ left outer join users_roles roles1_ on user0_.user_id=roles1_.user_id left outer join roles role2_ on roles1_.role_id=role2_.role_id where user0_.user_id=?
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1cedf325]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : login
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : password
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7e69e1da]
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6b7112ba]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roles.roleName
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : salt
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : token
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=mate.academy.internetshop.model.User)
+    - Returns
+       - EntityReturnImpl(entity=mate.academy.internetshop.model.User, querySpaceUid=<gen:0>, path=mate.academy.internetshop.model.User)
+          - CollectionAttributeFetchImpl(collection=mate.academy.internetshop.model.User.roles, querySpaceUid=<gen:1>, path=mate.academy.internetshop.model.User.roles)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=mate.academy.internetshop.model.Role, querySpaceUid=<gen:2>, path=mate.academy.internetshop.model.User.roles.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=mate.academy.internetshop.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(roles)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=mate.academy.internetshop.model.User.roles)
+                - SQL table alias mapping - roles1_
+                - alias suffix - 1_
+                - suffixed key columns - {user_id1_3_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - role_id1_1_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=mate.academy.internetshop.model.Role)
+                      - SQL table alias mapping - role2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {role_id1_1_2_}
+
+2019-10-09 22:09:21 DEBUG EntityLoader:137 - Static select for entity mate.academy.internetshop.model.User [READ]: select user0_.user_id as user_id1_2_0_, user0_.login as login2_2_0_, user0_.name as name3_2_0_, user0_.password as password4_2_0_, user0_.salt as salt5_2_0_, user0_.token as token6_2_0_, roles1_.user_id as user_id1_3_1_, role2_.role_id as role_id2_3_1_, role2_.role_id as role_id1_1_2_, role2_.name as name2_1_2_ from users user0_ left outer join users_roles roles1_ on user0_.user_id=roles1_.user_id left outer join roles role2_ on roles1_.role_id=role2_.role_id where user0_.user_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity mate.academy.internetshop.model.User: select user0_.user_id as user_id1_2_1_, user0_.login as login2_2_1_, user0_.name as name3_2_1_, user0_.password as password4_2_1_, user0_.salt as salt5_2_1_, user0_.token as token6_2_1_, roles1_.user_id as user_id1_3_3_, role2_.role_id as role_id2_3_3_, role2_.role_id as role_id1_1_0_, role2_.name as name2_1_0_ from users user0_ left outer join users_roles roles1_ on user0_.user_id=roles1_.user_id left outer join roles role2_ on roles1_.role_id=role2_.role_id where user0_.user_id=?
+2019-10-09 22:09:21 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity mate.academy.internetshop.model.User: select user0_.user_id as user_id1_2_1_, user0_.login as login2_2_1_, user0_.name as name3_2_1_, user0_.password as password4_2_1_, user0_.salt as salt5_2_1_, user0_.token as token6_2_1_, roles1_.user_id as user_id1_3_3_, role2_.role_id as role_id2_3_3_, role2_.role_id as role_id1_1_0_, role2_.name as name2_1_0_ from users user0_ left outer join users_roles roles1_ on user0_.user_id=roles1_.user_id left outer join roles role2_ on roles1_.role_id=role2_.role_id where user0_.user_id=?
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@64e4824f]
+2019-10-09 22:09:21 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@529ed528]
+2019-10-09 22:09:21 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : roleName
+2019-10-09 22:09:21 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-10-09 22:09:21 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-10-09 22:09:21 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=mate.academy.internetshop.model.User.roles)
+    - Returns
+       - CollectionReturnImpl(collection=mate.academy.internetshop.model.User.roles, querySpaceUid=<gen:0>, path=[mate.academy.internetshop.model.User.roles])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=mate.academy.internetshop.model.Role, querySpaceUid=<gen:1>, path=[mate.academy.internetshop.model.User.roles].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=mate.academy.internetshop.model.User.roles)
+          - SQL table alias mapping - roles0_
+          - alias suffix - 0_
+          - suffixed key columns - {user_id1_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - role_id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=mate.academy.internetshop.model.Role)
+                - SQL table alias mapping - role1_
+                - alias suffix - 1_
+                - suffixed key columns - {role_id1_1_1_}
+
+2019-10-09 22:09:21 DEBUG CollectionLoader:83 - Static select for collection mate.academy.internetshop.model.User.roles: select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2129e055] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-10-09 22:09:21 DEBUG EnumType:126 - Using NAMED-based conversion for Enum mate.academy.internetshop.model.Role$RoleName
+2019-10-09 22:09:21 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2019-10-09 22:09:21 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2019-10-09 22:09:21 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-09 22:09:21 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-10-09 22:09:21 DEBUG NamedQueryRepository:151 - Checking 0 named HQL queries
+2019-10-09 22:09:21 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2019-10-09 22:09:21 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@2f32c411
+2019-10-09 22:09:21 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: d4cb9065-261a-4d11-9862-e229c583c222 (<unnamed>)
+2019-10-09 22:09:21 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2019-10-09 22:09:29 DEBUG StatisticsInitiator:101 - Statistics initialized [enabled=false]
+2019-10-09 22:09:29 DEBUG QueryTranslatorFactoryInitiator:45 - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@53872e21
+2019-10-09 22:09:29 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mate.academy.internetshop.model.User WHERE login=:login
+2019-10-09 22:09:29 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:29 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'FROM'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[DOT] Node: '.'
+    |           |  |  |  +-[IDENT] Node: 'mate'
+    |           |  |  |  \-[IDENT] Node: 'academy'
+    |           |  |  \-[IDENT] Node: 'internetshop'
+    |           |  \-[IDENT] Node: 'model'
+    |           \-[IDENT] Node: 'User'
+    \-[WHERE] Node: 'WHERE'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'login'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'login'
+
+2019-10-09 22:09:29 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-09 22:09:29 DEBUG FromElement:147 - FromClause{level=1} : mate.academy.internetshop.model.User (<no alias>) -> user0_
+2019-10-09 22:09:29 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-09 22:09:29 DEBUG DotNode:698 - getDataType() : login -> org.hibernate.type.StringType@4f665056
+2019-10-09 22:09:29 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.login -> user0_.login
+2019-10-09 22:09:29 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-09 22:09:29 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} users user0_ ) ( WHERE ( = ( user0_.login {synthetic-alias} login ) ? ) ) )
+2019-10-09 22:09:29 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-09 22:09:29 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity User): [users]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+          | referencedTables: [users]
+          | path: {synthetic-alias}.login
+          | originalPropertyName: login
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+          |  | referencedTables: null
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    referencedTables: null
+          |    originalText: login
+          \-ParameterNode
+
+2019-10-09 22:09:29 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-09 22:09:29 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-09 22:09:29 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'user0_.user_id as user_id1_2_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.login' {propertyName=login,dereferenceType=PRIMITIVE,getPropertyPath=login,path={synthetic-alias}.login,tableAlias=user0_,className=mate.academy.internetshop.model.User,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'login' {originalText=login}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=login, expectedType=org.hibernate.type.StringType@4f665056}
+
+2019-10-09 22:09:29 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:29 DEBUG QueryTranslatorImpl:254 - HQL: FROM mate.academy.internetshop.model.User WHERE login=:login
+2019-10-09 22:09:29 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.login=?
+2019-10-09 22:09:29 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:29 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.login=?
+2019-10-09 22:09:29 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:29 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@3d7e8fb
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:29 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:29 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:29 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:29 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:29 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:29 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:29 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:29 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:29 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:29 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mate.academy.internetshop.model.User WHERE token=:token
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'FROM'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[DOT] Node: '.'
+    |           |  |  |  +-[IDENT] Node: 'mate'
+    |           |  |  |  \-[IDENT] Node: 'academy'
+    |           |  |  \-[IDENT] Node: 'internetshop'
+    |           |  \-[IDENT] Node: 'model'
+    |           \-[IDENT] Node: 'User'
+    \-[WHERE] Node: 'WHERE'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'token'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'token'
+
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG FromElement:147 - FromClause{level=1} : mate.academy.internetshop.model.User (<no alias>) -> user0_
+2019-10-09 22:09:31 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias} -> {synthetic-alias}
+2019-10-09 22:09:31 DEBUG DotNode:698 - getDataType() : token -> org.hibernate.type.StringType@4f665056
+2019-10-09 22:09:31 DEBUG FromReferenceNode:60 - Resolved : {synthetic-alias}.token -> user0_.token
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} users user0_ ) ( WHERE ( = ( user0_.token {synthetic-alias} token ) ? ) ) )
+2019-10-09 22:09:31 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-09 22:09:31 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity User): [users]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+          | referencedTables: [users]
+          | path: {synthetic-alias}.token
+          | originalPropertyName: token
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+          |  | referencedTables: null
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    referencedTables: null
+          |    originalText: token
+          \-ParameterNode
+
+2019-10-09 22:09:31 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'user0_.user_id as user_id1_2_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.token' {propertyName=token,dereferenceType=PRIMITIVE,getPropertyPath=token,path={synthetic-alias}.token,tableAlias=user0_,className=mate.academy.internetshop.model.User,classAlias=null}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'token' {originalText=token}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=token, expectedType=org.hibernate.type.StringType@4f665056}
+
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:254 - HQL: FROM mate.academy.internetshop.model.User WHERE token=:token
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:09:31 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:31 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@79018d38
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:31 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:31 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:31 INFO  AuthenticationFilter:46 - User: admin was authenticated
+2019-10-09 22:09:31 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:09:31 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:31 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@6894812e
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:31 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:31 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mate.academy.internetshop.model.User
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[IDENT] Node: 'mate'
+                |  |  |  \-[IDENT] Node: 'academy'
+                |  |  \-[IDENT] Node: 'internetshop'
+                |  \-[IDENT] Node: 'model'
+                \-[IDENT] Node: 'User'
+
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG FromElement:147 - FromClause{level=1} : mate.academy.internetshop.model.User (<no alias>) -> user0_
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} users user0_ ) )
+2019-10-09 22:09:31 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-09 22:09:31 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity User): [users]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.User)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+2019-10-09 22:09:31 DEBUG JoinProcessor:279 - Using FROM fragment [users user0_]
+2019-10-09 22:09:31 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (users)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'user0_.user_id as user_id1_2_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'users user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=users,tableAlias=user0_,origin=null,columns={,className=mate.academy.internetshop.model.User}}
+
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:254 - HQL: FROM mate.academy.internetshop.model.User
+2019-10-09 22:09:31 DEBUG QueryTranslatorImpl:255 - SQL: select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_
+2019-10-09 22:09:31 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:31 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_
+2019-10-09 22:09:31 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:31 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@35e2f4f1
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:31 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:31 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:31 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:31 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:31 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:35 DEBUG QueryTranslatorImpl:288 - parse() - HQL: FROM mate.academy.internetshop.model.Item
+2019-10-09 22:09:35 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:35 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[IDENT] Node: 'mate'
+                |  |  |  \-[IDENT] Node: 'academy'
+                |  |  \-[IDENT] Node: 'internetshop'
+                |  \-[IDENT] Node: 'model'
+                \-[IDENT] Node: 'Item'
+
+2019-10-09 22:09:35 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2019-10-09 22:09:35 DEBUG FromElement:147 - FromClause{level=1} : mate.academy.internetshop.model.Item (<no alias>) -> item0_
+2019-10-09 22:09:35 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2019-10-09 22:09:35 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( FromClause{level=1} items item0_ ) )
+2019-10-09 22:09:35 DEBUG HqlSqlWalker:1028 - Derived SELECT clause created.
+2019-10-09 22:09:35 DEBUG JoinProcessor:144 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Item): [items]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(mate.academy.internetshop.model.Item)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+2019-10-09 22:09:35 DEBUG JoinProcessor:279 - Using FROM fragment [items item0_]
+2019-10-09 22:09:35 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2019-10-09 22:09:35 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (items)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'item0_.item_id as item_id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=items,tableAlias=item0_,origin=null,columns={,className=mate.academy.internetshop.model.Item}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[item0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'items item0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=items,tableAlias=item0_,origin=null,columns={,className=mate.academy.internetshop.model.Item}}
+
+2019-10-09 22:09:35 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:35 DEBUG QueryTranslatorImpl:254 - HQL: FROM mate.academy.internetshop.model.Item
+2019-10-09 22:09:35 DEBUG QueryTranslatorImpl:255 - SQL: select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:09:35 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2019-10-09 22:09:35 DEBUG SQL:127 - select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:09:35 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:35 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#14]
+2019-10-09 22:09:35 DEBUG Loader:384 - Result set row: 1
+2019-10-09 22:09:35 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#16]
+2019-10-09 22:09:35 DEBUG Loader:384 - Result set row: 2
+2019-10-09 22:09:35 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#17]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = book
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 65.0
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = horse
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = cup
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 15.5
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:35 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:09:35 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:39 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:09:39 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:39 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@d086f00
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:39 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:39 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:39 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:39 INFO  AuthenticationFilter:46 - User: admin was authenticated
+2019-10-09 22:09:39 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:09:39 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:09:39 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@28d8e1be
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:09:39 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:09:39 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:09:39 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:09:39 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:09:39 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:09:39 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:09:50 DEBUG DriverManagerConnectionProviderImpl:249 - Connection pool now considered primed; min-size will be maintained
+2019-10-09 22:10:23 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:23 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:23 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@7aa84556
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:23 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:23 INFO  AuthenticationFilter:46 - User: admin was authenticated
+2019-10-09 22:10:23 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:23 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:23 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@7158e742
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:23 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:23 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2019-10-09 22:10:23 DEBUG TransactionImpl:81 - begin
+2019-10-09 22:10:23 DEBUG ActionQueue:281 - Executing identity-insert immediately
+2019-10-09 22:10:23 DEBUG SQL:127 - insert into items (description, name, price) values (?, ?, ?)
+2019-10-09 22:10:23 DEBUG IdentifierGeneratorHelper:78 - Natively generated identity: 23
+2019-10-09 22:10:23 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2019-10-09 22:10:23 DEBUG TransactionImpl:98 - committing
+2019-10-09 22:10:23 DEBUG AbstractFlushingEventListener:140 - Processing flush-time cascades
+2019-10-09 22:10:23 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-10-09 22:10:23 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2019-10-09 22:10:23 DEBUG AbstractFlushingEventListener:121 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2019-10-09 22:10:23 DEBUG EntityPrinter:110 - Listing entities:
+2019-10-09 22:10:23 DEBUG EntityPrinter:117 - mate.academy.internetshop.model.Item{price=120.0, name=flint, description=null, id=23}
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:23 DEBUG TestData:36 - Item created
+2019-10-09 22:10:23 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:23 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:23 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@59fd3a6e
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:23 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:23 INFO  AuthenticationFilter:46 - User: admin was authenticated
+2019-10-09 22:10:23 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:23 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:23 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@2858892b
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:23 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:23 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:23 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:23 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:23 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:25 DEBUG SQL:127 - select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:10:25 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:25 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:25 DEBUG Loader:384 - Result set row: 1
+2019-10-09 22:10:25 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:25 DEBUG Loader:384 - Result set row: 2
+2019-10-09 22:10:25 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:25 DEBUG Loader:384 - Result set row: 3
+2019-10-09 22:10:25 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#23]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = book
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 65.0
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = horse
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = cup
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 15.5
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#23]
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = flint
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 120.0
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:25 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#23]
+2019-10-09 22:10:25 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:27 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:27 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@53de14b3
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:27 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:27 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 INFO  AuthenticationFilter:46 - User: admin was authenticated
+2019-10-09 22:10:27 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:27 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:27 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = admin
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Mike
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = d11bb461f897dd2e7c213ec912f881b3e4703cca4826e01ec619cdc11cbce52801aa24ad9170e6071cba48d75b311c3b01b87113676c18f6f7ae912e9b0e2021
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@789faedb
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 985e2adf-b3fb-4f25-948e-2b4fc9e8fdb4
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#19]
+2019-10-09 22:10:27 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:27 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG CollectionReferenceInitializerImpl:59 - Found row of collection: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `roleName` : value = ADMIN
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`roleName`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Role#1]
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#19]
+2019-10-09 22:10:27 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:27 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 DEBUG SQL:127 - select item0_.item_id as item_id1_0_0_, item0_.description as descript2_0_0_, item0_.name as name3_0_0_, item0_.price as price4_0_0_ from items item0_ where item0_.item_id=?
+2019-10-09 22:10:27 DEBUG EntityReferenceInitializerImpl:131 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#23]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = flint
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 120.0
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#23]
+2019-10-09 22:10:27 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : mate.academy.internetshop.model.Item#23
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2019-10-09 22:10:27 DEBUG TransactionImpl:81 - begin
+2019-10-09 22:10:27 DEBUG TransactionImpl:98 - committing
+2019-10-09 22:10:27 DEBUG AbstractFlushingEventListener:140 - Processing flush-time cascades
+2019-10-09 22:10:27 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-10-09 22:10:27 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2019-10-09 22:10:27 DEBUG AbstractFlushingEventListener:121 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2019-10-09 22:10:27 DEBUG EntityPrinter:110 - Listing entities:
+2019-10-09 22:10:27 DEBUG EntityPrinter:117 - mate.academy.internetshop.model.Item{price=120.0, name=flint, description=null, id=23}
+2019-10-09 22:10:27 DEBUG SQL:127 - delete from items where item_id=?
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:27 DEBUG JdbcCoordinatorImpl:170 - HHH000420: Closing un-released batch
+2019-10-09 22:10:27 DEBUG SQL:127 - select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:10:27 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:27 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:27 DEBUG Loader:384 - Result set row: 1
+2019-10-09 22:10:27 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:27 DEBUG Loader:384 - Result set row: 2
+2019-10-09 22:10:27 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = book
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 65.0
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = horse
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = cup
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 15.5
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:27 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:27 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:50 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2019-10-09 22:10:50 DEBUG TransactionImpl:81 - begin
+2019-10-09 22:10:50 DEBUG ActionQueue:281 - Executing identity-insert immediately
+2019-10-09 22:10:50 DEBUG SQL:127 - insert into users (login, name, password, salt, token) values (?, ?, ?, ?, ?)
+2019-10-09 22:10:50 DEBUG IdentifierGeneratorHelper:78 - Natively generated identity: 20
+2019-10-09 22:10:50 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2019-10-09 22:10:50 DEBUG TransactionImpl:98 - committing
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:140 - Processing flush-time cascades
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-10-09 22:10:50 DEBUG Collections:196 - Collection found: [mate.academy.internetshop.model.User.roles#20], was: [<unreferenced>] (initialized)
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:121 - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+2019-10-09 22:10:50 DEBUG EntityPrinter:110 - Listing entities:
+2019-10-09 22:10:50 DEBUG EntityPrinter:117 - mate.academy.internetshop.model.User{password=4d4723eb9db2b19a42eadf437520f97039ce1f0242ec06584bbf590514ce0e3be4753d94248c26c505723c06e8d601b1cbf1ea123337ed52f1a80323dcc0a3f6, salt=[-14, -31, 88, -47, -89, -76, -107, 6, -18, -103, -78, -4, 60, 44, -118, 37], roles=[], name=Valdes, id=20, login=www, token=9a2c2f39-e7ec-44e3-b6a1-25b8a5f0b6e3}
+2019-10-09 22:10:50 DEBUG AbstractCollectionPersister:1296 - Inserting collection: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:50 DEBUG AbstractCollectionPersister:1385 - Collection was empty
+2019-10-09 22:10:50 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:50 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:50 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2019-10-09 22:10:50 DEBUG TransactionImpl:81 - begin
+2019-10-09 22:10:50 DEBUG TransactionImpl:98 - committing
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:140 - Processing flush-time cascades
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-10-09 22:10:50 DEBUG Collections:196 - Collection found: [mate.academy.internetshop.model.User.roles#20], was: [mate.academy.internetshop.model.User.roles#20] (initialized)
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:114 - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+2019-10-09 22:10:50 DEBUG AbstractFlushingEventListener:121 - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2019-10-09 22:10:50 DEBUG EntityPrinter:110 - Listing entities:
+2019-10-09 22:10:50 DEBUG EntityPrinter:117 - mate.academy.internetshop.model.User{password=4d4723eb9db2b19a42eadf437520f97039ce1f0242ec06584bbf590514ce0e3be4753d94248c26c505723c06e8d601b1cbf1ea123337ed52f1a80323dcc0a3f6, salt=[-14, -31, 88, -47, -89, -76, -107, 6, -18, -103, -78, -4, 60, 44, -118, 37], roles=[], name=Valdes, id=20, login=www, token=9a2c2f39-e7ec-44e3-b6a1-25b8a5f0b6e3}
+2019-10-09 22:10:50 DEBUG SQL:127 - update users set login=?, name=?, password=?, salt=?, token=? where user_id=?
+2019-10-09 22:10:50 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:50 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:54 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.login=?
+2019-10-09 22:10:54 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:54 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = www
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Valdes
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = 4d4723eb9db2b19a42eadf437520f97039ce1f0242ec06584bbf590514ce0e3be4753d94248c26c505723c06e8d601b1cbf1ea123337ed52f1a80323dcc0a3f6
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@496d31eb
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 9a2c2f39-e7ec-44e3-b6a1-25b8a5f0b6e3
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:54 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:54 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:54 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:54 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:54 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:54 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:54 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:54 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:54 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:56 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:56 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:56 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = www
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Valdes
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = 4d4723eb9db2b19a42eadf437520f97039ce1f0242ec06584bbf590514ce0e3be4753d94248c26c505723c06e8d601b1cbf1ea123337ed52f1a80323dcc0a3f6
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@42a7ed21
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 9a2c2f39-e7ec-44e3-b6a1-25b8a5f0b6e3
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:56 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:56 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:56 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:56 INFO  AuthenticationFilter:46 - User: www was authenticated
+2019-10-09 22:10:56 DEBUG SQL:127 - select user0_.user_id as user_id1_2_, user0_.login as login2_2_, user0_.name as name3_2_, user0_.password as password4_2_, user0_.salt as salt5_2_, user0_.token as token6_2_ from users user0_ where user0_.token=?
+2019-10-09 22:10:56 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:56 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `login` : value = www
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`login`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = Valdes
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `password` : value = 4d4723eb9db2b19a42eadf437520f97039ce1f0242ec06584bbf590514ce0e3be4753d94248c26c505723c06e8d601b1cbf1ea123337ed52f1a80323dcc0a3f6
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`password`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `roles` : value = NOT NULL COLLECTION
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`roles`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `salt` : value = [B@53f50fe1
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`salt`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:190 - Processing attribute `token` : value = 9a2c2f39-e7ec-44e3-b6a1-25b8a5f0b6e3
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:221 - Attribute (`token`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:56 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.User#20]
+2019-10-09 22:10:56 DEBUG AbstractLoadPlanBasedCollectionInitializer:73 - Loading collection: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG SQL:127 - select roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, role1_.role_id as role_id1_1_1_, role1_.name as name2_1_1_ from users_roles roles0_ inner join roles role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2019-10-09 22:10:56 DEBUG ResultSetProcessorImpl:171 - Preparing collection initializer : [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:394 - 1 collections were found in result set for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:303 - Collection fully initialized: [mate.academy.internetshop.model.User.roles#20]
+2019-10-09 22:10:56 DEBUG CollectionLoadContext:394 - 1 collections initialized for role: mate.academy.internetshop.model.User.roles
+2019-10-09 22:10:56 DEBUG AbstractLoadPlanBasedCollectionInitializer:105 - Done loading collection
+2019-10-09 22:10:56 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:10:58 DEBUG SQL:127 - select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:10:58 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:10:58 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:58 DEBUG Loader:384 - Result set row: 1
+2019-10-09 22:10:58 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:58 DEBUG Loader:384 - Result set row: 2
+2019-10-09 22:10:58 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = book
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 65.0
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = horse
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = cup
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 15.5
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:10:58 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:10:58 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2019-10-09 22:11:12 DEBUG SQL:127 - select item0_.item_id as item_id1_0_, item0_.description as descript2_0_, item0_.name as name3_0_, item0_.price as price4_0_ from items item0_
+2019-10-09 22:11:12 DEBUG Loader:384 - Result set row: 0
+2019-10-09 22:11:12 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#14]
+2019-10-09 22:11:12 DEBUG Loader:384 - Result set row: 1
+2019-10-09 22:11:12 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#16]
+2019-10-09 22:11:12 DEBUG Loader:384 - Result set row: 2
+2019-10-09 22:11:12 DEBUG Loader:1586 - Result row: EntityKey[mate.academy.internetshop.model.Item#17]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = book
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 65.0
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#14]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = horse
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 2000.0
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#16]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:178 - Resolving attributes for [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `name` : value = cup
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`name`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:190 - Processing attribute `price` : value = 15.5
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:221 - Attribute (`price`)  - enhanced for lazy-loading? - false
+2019-10-09 22:11:12 DEBUG TwoPhaseLoad:342 - Done materializing entity [mate.academy.internetshop.model.Item#17]
+2019-10-09 22:11:12 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
