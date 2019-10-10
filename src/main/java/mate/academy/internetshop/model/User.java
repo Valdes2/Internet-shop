@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -33,8 +34,9 @@ public class User {
     private byte[] salt;
     @Transient
     private List<Order> orders;
-    @Transient
-    private Long bucketId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "bucket_id", referencedColumnName = "bucket_id")
+    private Bucket bucket;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
@@ -112,12 +114,12 @@ public class User {
         this.orders.add(order);
     }
 
-    public void setBucketId(Long bucketId) {
-        this.bucketId = bucketId;
+    public Bucket getBucket() {
+        return bucket;
     }
 
-    public Long getBucketId() {
-        return bucketId;
+    public void setBucket(Bucket bucket) {
+        this.bucket = bucket;
     }
 
     public Set<Role> getRoles() {

@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(Long id) {
         User user = userDao.delete(id);
-        bucketDao.clear(user.getBucketId());
+        bucketDao.clear(user.getBucket().getId());
     }
 
     @Override

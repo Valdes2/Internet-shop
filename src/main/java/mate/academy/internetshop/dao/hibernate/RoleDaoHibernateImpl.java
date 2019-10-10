@@ -13,9 +13,15 @@ import org.hibernate.Session;
 public class RoleDaoHibernateImpl implements RoleDao {
     @Override
     public Role getRole(Long roleId) {
-        try (Session session = HibernateUtil.sessionFactory().openSession()) {
+        Session session = null;
+        try {
+            session = HibernateUtil.sessionFactory().openSession();
             Role role = session.get(Role.class, roleId);
             return role;
+        } finally {
+            if (session != null) {
+                session.close();
+            }
         }
     }
 

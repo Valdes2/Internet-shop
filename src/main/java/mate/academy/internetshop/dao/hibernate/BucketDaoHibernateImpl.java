@@ -1,31 +1,27 @@
 package mate.academy.internetshop.dao.hibernate;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-import mate.academy.internetshop.dao.UserDao;
-import mate.academy.internetshop.exceptions.AuthenticationException;
+import mate.academy.internetshop.dao.BucketDao;
 import mate.academy.internetshop.lib.Dao;
-import mate.academy.internetshop.model.Order;
-import mate.academy.internetshop.model.User;
-import mate.academy.internetshop.util.HashUtil;
+import mate.academy.internetshop.model.Bucket;
+import mate.academy.internetshop.model.Item;
 import mate.academy.internetshop.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 @Dao
-public class UserDaoHibernateImpl implements UserDao {
+public class BucketDaoHibernateImpl implements BucketDao {
     @Override
-    public User create(User user) {
-        Long userId = null;
+    public Bucket create(Bucket bucket) {
+        Long bucketId = null;
         Transaction transaction = null;
         Session session = null;
         try {
             session = HibernateUtil.sessionFactory().openSession();
             transaction = session.beginTransaction();
-            userId = (Long) session.save(user);
+            bucketId = (Long) session.save(bucket);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -36,17 +32,17 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.close();
             }
         }
-        user.setId(userId);
-        return user;
+        bucket.setId(bucketId);
+        return bucket;
     }
 
     @Override
-    public User get(Long id) {
+    public Bucket get(Long id) {
         Session session = null;
         try {
             session = HibernateUtil.sessionFactory().openSession();
-            User user = session.get(User.class, id);
-            return user;
+            Bucket bucket = session.get(Bucket.class, id);
+            return bucket;
         } finally {
             if (session != null) {
                 session.close();
@@ -55,13 +51,13 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     @Override
-    public User update(User user) {
+    public Bucket update(Bucket bucket) {
         Transaction transaction = null;
         Session session = null;
         try {
             session = HibernateUtil.sessionFactory().openSession();
             transaction = session.beginTransaction();
-            session.update(user);
+            session.update(bucket);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -72,18 +68,18 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.close();
             }
         }
-        return user;
+        return bucket;
     }
 
     @Override
-    public User delete(Long id) {
-        User deletedUser = get(id);
+    public Bucket delete(Long id) {
+        Bucket deletedBucket = get(id);
         Transaction transaction = null;
         Session session = null;
         try {
             session = HibernateUtil.sessionFactory().openSession();
             transaction = session.beginTransaction();
-            session.delete(deletedUser);
+            session.delete(deletedBucket);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -94,71 +90,21 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.close();
             }
         }
-        return deletedUser;
+        return deletedBucket;
     }
 
     @Override
-    public List<User> getAll() {
-        List<User> allUsers = new ArrayList<>();
-        Session session = null;
-        try {
-            session = HibernateUtil.sessionFactory().openSession();
-            allUsers = session.createQuery("FROM User").list();
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-        return allUsers;
-    }
-
-    @Override
-    public User login(String login, String password) throws AuthenticationException {
-        Session session = null;
-        try {
-            session = HibernateUtil.sessionFactory().openSession();
-            Query query = session
-                    .createQuery("FROM User WHERE login=:login");
-            query.setParameter("login", login);
-            User user = (User) query.uniqueResult();
-            if (user.getPassword().equals(HashUtil.hashPassword(password, user.getSalt()))) {
-                return user;
-            }
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public Optional<User> getByToken(String token) {
-        Session session = null;
-        try {
-            session = HibernateUtil.sessionFactory().openSession();
-            Query query = session.createQuery("FROM User WHERE token=:token");
-            query.setParameter("token", token);
-            List<User> list = query.list();
-            return list.stream().findFirst();
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-    }
-
-    @Override
-    public void addRole(Long roleId, Long userId) {
+    public Bucket addItemToBucket(Long itemId, Long bucketId) {
         Transaction transaction = null;
         Session session = null;
         try {
             session = HibernateUtil.sessionFactory().openSession();
             transaction = session.beginTransaction();
             Query query = session
-                    .createSQLQuery("INSERT INTO users_roles (role_id, user_id) VALUES (?, ?);");
-            query.setParameter(1, roleId);
-            query.setParameter(2, userId);
+                    .createSQLQuery("INSERT INTO buckets_items"
+                            + " (bucket_id, item_id) VALUES (?, ?);");
+            query.setParameter(1, bucketId);
+            query.setParameter(2, itemId);
             query.executeUpdate();
             transaction.commit();
         } catch (Exception e) {
@@ -170,16 +116,61 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.close();
             }
         }
-
+        return get(bucketId);
     }
 
     @Override
-    public void addOrder(Long orderId, Long userId) {
-
+    public Bucket deleteItemFromBucket(Long itemId, Long bucketId) {
+        Transaction transaction = null;
+        Session session = null;
+        try {
+            session = HibernateUtil.sessionFactory().openSession();
+            transaction = session.beginTransaction();
+            Query query = session
+                    .createSQLQuery("DELETE FROM buckets_items"
+                            + " WHERE item_id = ? AND bucket_id = ?;");
+            query.setParameter(1, itemId);
+            query.setParameter(2, bucketId);
+            query.executeUpdate();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return get(bucketId);
     }
 
     @Override
-    public List<Order> getUserOrders(Long userId) {
-        return null;
+    public Bucket clear(Long bucketId) {
+        Transaction transaction = null;
+        Session session = null;
+        try {
+            session = HibernateUtil.sessionFactory().openSession();
+            transaction = session.beginTransaction();
+            Query query = session
+                    .createSQLQuery("DELETE FROM buckets_items WHERE bucket_id = ?;");
+            query.setParameter(1, bucketId);
+            query.executeUpdate();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return get(bucketId);
+    }
+
+    @Override
+    public List<Item> getAllItems(Long bucketId) {
+        return get(bucketId).getItems();
     }
 }

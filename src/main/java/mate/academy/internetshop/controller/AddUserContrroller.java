@@ -48,8 +48,10 @@ public class AddUserContrroller extends HttpServlet {
             userService.addRole(newUser, USER);
         }
 
-        Bucket bucket = bucketService.create(new Bucket(newUser.getId()));
-        newUser.setBucketId(bucket.getId());
+        Bucket bucket = new Bucket();
+        bucket.setUser(newUser);
+        bucketService.create(bucket);
+        newUser.setBucket(bucket);
         userService.update(newUser);
 
         resp.sendRedirect(req.getContextPath() + "/login");

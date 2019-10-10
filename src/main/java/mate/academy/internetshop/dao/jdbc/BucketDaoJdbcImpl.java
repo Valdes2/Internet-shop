@@ -27,7 +27,7 @@ public class BucketDaoJdbcImpl extends AbstractDao implements BucketDao {
         String query = "INSERT INTO buckets (user_id) VALUE (?);";
         try (PreparedStatement preparedStatement
                      = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
-            preparedStatement.setLong(1, bucket.getUserId());
+            preparedStatement.setLong(1, bucket.getUser().getId());
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             while (resultSet.next()) {
@@ -62,7 +62,7 @@ public class BucketDaoJdbcImpl extends AbstractDao implements BucketDao {
     public Bucket update(Bucket bucket) {
         String query = "UPDATE buckets SET user_id = ? WHERE bucket_id = ?;";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setLong(1, bucket.getUserId());
+            preparedStatement.setLong(1, bucket.getUser().getId());
             preparedStatement.setLong(2, bucket.getId());
             preparedStatement.executeUpdate();
             for (Item item: bucket.getItems()) {
