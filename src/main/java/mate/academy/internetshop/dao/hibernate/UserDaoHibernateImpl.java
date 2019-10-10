@@ -129,7 +129,7 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.close();
             }
         }
-        return null;
+        throw new AuthenticationException("Incorrect login or password");
     }
 
     @Override
@@ -174,12 +174,20 @@ public class UserDaoHibernateImpl implements UserDao {
     }
 
     @Override
-    public void addOrder(Long orderId, Long userId) {
-
-    }
-
-    @Override
     public List<Order> getUserOrders(Long userId) {
-        return null;
+        List<Order> userOrders = new ArrayList<>();
+        Session session = null;
+        User user = get(userId);
+        try {
+            session = HibernateUtil.sessionFactory().openSession();
+            Query query = session.createQuery("FROM Order WHERE user=:user");
+            query.setParameter("user", user);
+            userOrders = query.list();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return userOrders;
     }
 }

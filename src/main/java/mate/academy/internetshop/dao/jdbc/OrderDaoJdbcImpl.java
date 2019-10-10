@@ -27,7 +27,7 @@ public class OrderDaoJdbcImpl extends AbstractDao implements OrderDao {
         String query = "INSERT INTO orders (user_id) VALUE (?);";
         try (PreparedStatement preparedStatement
                      = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
-            preparedStatement.setLong(1, order.getUserId());
+            preparedStatement.setLong(1, order.getUser().getId());
             preparedStatement.executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             while (resultSet.next()) {
@@ -74,7 +74,7 @@ public class OrderDaoJdbcImpl extends AbstractDao implements OrderDao {
     public Order update(Order order) {
         String query = "UPDATE orders SET user_id = ? WHERE order_id = ?;";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setLong(1, order.getUserId());
+            preparedStatement.setLong(1, order.getUser().getId());
             preparedStatement.setLong(2, order.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

@@ -25,7 +25,5 @@ public interface UserDao {
 
     void addRole(Long roleId, Long userId);
 
-    void addOrder(Long orderId, Long userId);
-
     List<Order> getUserOrders(Long userId);
 }

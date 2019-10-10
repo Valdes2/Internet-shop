@@ -215,7 +215,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         }
     }
 
-    @Override
     public void addOrder(Long orderId, Long userId) {
         String addOrderQuery = "INSERT INTO users_orders (user_id, order_id) VALUES (?, ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(addOrderQuery)) {

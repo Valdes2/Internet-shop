@@ -43,16 +43,18 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order deleteUserOrder(Long orderId) {
         Order order = get(orderId);
-        Long userId = order.getUserId();
+        Long userId = order.getUser().getId();
         userDao.get(userId).getOrders().remove(order);
         return order;
     }
 
     @Override
     public Order completeOrder(List items, Long userId) {
-        Order completeOrder = orderDao.create(new Order(userId, items));
         User user = userDao.get(userId);
-        userDao.addOrder(completeOrder.getId(),userId);
+        Order completeOrder = new Order();
+        completeOrder.setUser(user);
+        completeOrder.setOrderedItems(items);
+        orderDao.create(completeOrder);
         return completeOrder;
     }
 }

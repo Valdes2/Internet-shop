@@ -15,9 +15,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "users")
@@ -32,8 +32,8 @@ public class User {
     private String token;
     @Column(columnDefinition = "BLOB")
     private byte[] salt;
-    @Transient
-    private List<Order> orders;
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    private List<Order> orders = new ArrayList<>();
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "bucket_id", referencedColumnName = "bucket_id")
     private Bucket bucket;
@@ -51,7 +51,6 @@ public class User {
         this.name = name;
         this.login = login;
         this.password = password;
-        this.orders = new ArrayList<>();
     }
 
     public void setId(Long id) {
@@ -139,7 +138,6 @@ public class User {
         return "User{"
                 + "id=" + id
                 + ", name='" + name + '\''
-                + ", password='" + password + '\''
-                + ", orders=" + orders + '}';
+                + ", password='" + password + '\'';
     }
 }

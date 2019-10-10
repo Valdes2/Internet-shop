@@ -16,7 +16,7 @@ import mate.academy.internetshop.util.HashUtil;
 
 public class AddUserContrroller extends HttpServlet {
     private static final Long ADMIN = 1L;
-    private static final Long USER = 2L;
+    private static final Long USER = 3L;
 
     @Inject
     public static UserService userService;
