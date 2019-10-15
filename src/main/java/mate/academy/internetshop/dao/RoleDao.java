@@ -7,6 +7,4 @@ import mate.academy.internetshop.model.Role;
 public interface RoleDao {
 
     Role getRole(Long roleId);
-
-    Set<Role> getAllRoles(Long userId);
 }

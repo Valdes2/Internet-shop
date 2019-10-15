@@ -66,7 +66,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
                 String pass = resultSet.getString("password");
                 User user = new User(name, login, pass);
                 user.setId(resultSet.getLong("user_id"));
-                user.setBucketId(resultSet.getLong("bucket_id"));
                 user.setSalt(resultSet.getBytes("salt"));
                 user.setToken(resultSet.getString("token"));
                 user.setOrders(getUserOrders(id));
@@ -87,7 +86,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
             preparedStatement.setString(2, user.getLogin());
             preparedStatement.setString(3, user.getPassword());
             preparedStatement.setString(4, user.getToken());
-            preparedStatement.setLong(5, user.getBucketId());
+            preparedStatement.setLong(5, user.getBucket().getId());
             preparedStatement.setLong(6, user.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -162,7 +161,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
                 User user = new User(name, login, password);
                 user.setId(resultSet.getLong("user_id"));
                 user.setToken(resultSet.getString("token"));
-                user.setBucketId(resultSet.getLong("bucket_id"));
+                //user.setBucketId(resultSet.getLong("bucket_id"));
                 return user;
             }
         } catch (SQLException e) {
@@ -184,7 +183,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
                 User user = new User(name, login, password);
                 user.setId(resultSet.getLong("user_id"));
                 user.setToken(resultSet.getString("token"));
-                user.setBucketId(resultSet.getLong("bucket_id"));
+                //user.setBucketId(resultSet.getLong("bucket_id"));
                 return Optional.of(user);
             }
         } catch (SQLException e) {
@@ -193,8 +192,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         return Optional.empty();
     }
 
-    @Override
-    public void addRole(Long roleId, Long userId) {
+    private void addRole(Long roleId, Long userId) {
         String query = "INSERT INTO users_roles (role_id, user_id) VALUES (?, ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setLong(1, roleId);
@@ -215,7 +213,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         }
     }
 
-    @Override
     public void addOrder(Long orderId, Long userId) {
         String addOrderQuery = "INSERT INTO users_orders (user_id, order_id) VALUES (?, ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(addOrderQuery)) {
@@ -227,7 +224,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         }
     }
 
-    @Override
     public List<Order> getUserOrders(Long userId) {
         List<Order> userOrders = new ArrayList<>();
         String query

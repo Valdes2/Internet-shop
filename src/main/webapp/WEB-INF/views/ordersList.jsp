@@ -32,7 +32,7 @@
         <c:forEach var="order" items="${orders}">
             <tr>
                 <td><c:out value="${order.id}"/></td>
-                <td><c:out value="${order.userId}"/></td>
+                <td><c:out value="${order.user.id}"/></td>
                 <td><c:out value="${order.orderedItems}" /></td>
                 <td><a class="w3-btn w3-greyscale" href="${pageContext.request.contextPath}/servlet/deleteOrder?order_id=${order.id}">Delete</a></td>
             </tr>

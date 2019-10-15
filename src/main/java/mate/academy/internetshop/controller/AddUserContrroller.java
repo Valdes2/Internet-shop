@@ -9,14 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Bucket;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
 import mate.academy.internetshop.util.HashUtil;
 
 public class AddUserContrroller extends HttpServlet {
-    private static final Long ADMIN = 1L;
-    private static final Long USER = 2L;
 
     @Inject
     public static UserService userService;
@@ -41,15 +40,16 @@ public class AddUserContrroller extends HttpServlet {
         String hashPass = HashUtil.hashPassword(password, salt);
         User newUser = new User(name, login, hashPass);
         newUser.setSalt(salt);
-        newUser = userService.create(newUser);
         if (newUser.getLogin().equals("admin")) {
-            userService.addRole(newUser, ADMIN);
+            newUser.addRole(Role.of("ADMIN"));
         } else {
-            userService.addRole(newUser, USER);
+            newUser.addRole(Role.of("USER"));
         }
-
-        Bucket bucket = bucketService.create(new Bucket(newUser.getId()));
-        newUser.setBucketId(bucket.getId());
+        newUser = userService.create(newUser);
+        Bucket bucket = new Bucket();
+        bucket.setUser(newUser);
+        bucketService.create(bucket);
+        newUser.setBucket(bucket);
         userService.update(newUser);
 
         resp.sendRedirect(req.getContextPath() + "/login");

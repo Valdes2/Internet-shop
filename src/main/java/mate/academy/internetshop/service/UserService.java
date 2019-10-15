@@ -19,7 +19,7 @@ public interface UserService {
 
     void delete(Long id);
 
-    List<Order> getOrders(Long userId);
+    List<Order> getOrders(User user);
 
     List<User> getAllUsers();
 
@@ -27,7 +27,4 @@ public interface UserService {
 
     Optional<User> getByToken(String token);
 
-    void addRole(User user, Long roleId);
-
-    Set<Role> getAllRoles(Long userId);
 }

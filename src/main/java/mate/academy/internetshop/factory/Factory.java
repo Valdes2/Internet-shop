@@ -9,12 +9,11 @@ import mate.academy.internetshop.dao.ItemDao;
 import mate.academy.internetshop.dao.OrderDao;
 import mate.academy.internetshop.dao.RoleDao;
 import mate.academy.internetshop.dao.UserDao;
+import mate.academy.internetshop.dao.hibernate.BucketDaoHibernateImpl;
 import mate.academy.internetshop.dao.hibernate.ItemDaoHibernateImpl;
-import mate.academy.internetshop.dao.jdbc.BucketDaoJdbcImpl;
-import mate.academy.internetshop.dao.jdbc.ItemDaoJdbcImpl;
-import mate.academy.internetshop.dao.jdbc.OrderDaoJdbcImpl;
-import mate.academy.internetshop.dao.jdbc.RoleDaoJdbcImpl;
-import mate.academy.internetshop.dao.jdbc.UserDaoJdbcImpl;
+import mate.academy.internetshop.dao.hibernate.OrderDaoHibernateImpl;
+import mate.academy.internetshop.dao.hibernate.RoleDaoHibernateImpl;
+import mate.academy.internetshop.dao.hibernate.UserDaoHibernateImpl;
 import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.ItemService;
 import mate.academy.internetshop.service.OrderService;
@@ -23,6 +22,7 @@ import mate.academy.internetshop.service.impl.BucketServiceImpl;
 import mate.academy.internetshop.service.impl.ItemServiceImpl;
 import mate.academy.internetshop.service.impl.OrderServiceImpl;
 import mate.academy.internetshop.service.impl.UserServiceImpl;
+
 import org.apache.log4j.Logger;
 
 public class Factory {
@@ -54,7 +54,7 @@ public class Factory {
 
     public static BucketDao getBucketDao() {
         if (bucketDao == null) {
-            bucketDao = new BucketDaoJdbcImpl(connection);
+            bucketDao = new BucketDaoHibernateImpl();
         }
         return bucketDao;
     }
@@ -68,21 +68,21 @@ public class Factory {
 
     public static OrderDao getOrderDao() {
         if (orderDao == null) {
-            orderDao = new OrderDaoJdbcImpl(connection);
+            orderDao = new OrderDaoHibernateImpl();
         }
         return orderDao;
     }
 
     public static UserDao getUserDao() {
         if (userDao == null) {
-            userDao = new UserDaoJdbcImpl(connection);
+            userDao = new UserDaoHibernateImpl();
         }
         return userDao;
     }
 
     public static RoleDao getRoleDao() {
         if (roleDao == null) {
-            roleDao = new RoleDaoJdbcImpl(connection);
+            roleDao = new RoleDaoHibernateImpl();
         }
         return roleDao;
     }

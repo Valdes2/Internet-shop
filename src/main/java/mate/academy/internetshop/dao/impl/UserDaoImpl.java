@@ -76,17 +76,10 @@ public class UserDaoImpl implements UserDao {
         return Storage.users.stream().filter(u -> u.getToken().equals(token)).findFirst();
     }
 
-    @Override
-    public void addRole(Long roleId, Long userId) {
-
-    }
-
-    @Override
     public void addOrder(Long orderId, Long userId) {
 
     }
 
-    @Override
     public List<Order> getUserOrders(Long userId) {
         return null;
     }
