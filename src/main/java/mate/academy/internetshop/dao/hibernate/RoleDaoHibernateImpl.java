@@ -1,7 +1,5 @@
 package mate.academy.internetshop.dao.hibernate;
 
-import java.util.Set;
-
 import mate.academy.internetshop.dao.RoleDao;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Role;
