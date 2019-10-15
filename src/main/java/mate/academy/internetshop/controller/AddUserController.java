@@ -15,7 +15,7 @@ import mate.academy.internetshop.service.BucketService;
 import mate.academy.internetshop.service.UserService;
 import mate.academy.internetshop.util.HashUtil;
 
-public class AddUserContrroller extends HttpServlet {
+public class AddUserController extends HttpServlet {
 
     @Inject
     public static UserService userService;

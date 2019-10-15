@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>addUser</servlet-name>
-        <servlet-class>mate.academy.internetshop.controller.AddUserContrroller</servlet-class>
+        <servlet-class>mate.academy.internetshop.controller.AddUserController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>addUser</servlet-name>
