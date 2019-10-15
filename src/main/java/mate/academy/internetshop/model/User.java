@@ -37,7 +37,7 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "bucket_id", referencedColumnName = "bucket_id")
     private Bucket bucket;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "role_id"))
@@ -130,7 +130,7 @@ public class User {
     }
 
     public void addRole(Role role) {
-        roles.add(role);
+        this.roles.add(role);
     }
 
     @Override

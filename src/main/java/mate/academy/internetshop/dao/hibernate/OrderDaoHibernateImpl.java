@@ -3,9 +3,14 @@ package mate.academy.internetshop.dao.hibernate;
 import mate.academy.internetshop.dao.OrderDao;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Order;
+import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Dao
 public class OrderDaoHibernateImpl implements OrderDao {
@@ -87,5 +92,21 @@ public class OrderDaoHibernateImpl implements OrderDao {
             }
         }
         return deletedOrder;
+    }
+
+    public List<Order> getUserOrders(User user) {
+        List<Order> userOrders = new ArrayList<>();
+        Session session = null;
+        try {
+            session = HibernateUtil.sessionFactory().openSession();
+            Query query = session.createQuery("FROM Order WHERE user=:user");
+            query.setParameter("user", user);
+            userOrders = query.list();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return userOrders;
     }
 }

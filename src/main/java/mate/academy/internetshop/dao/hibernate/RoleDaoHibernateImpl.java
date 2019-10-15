@@ -24,9 +24,4 @@ public class RoleDaoHibernateImpl implements RoleDao {
             }
         }
     }
-
-    @Override
-    public Set<Role> getAllRoles(Long userId) {
-        return null;
-    }
 }

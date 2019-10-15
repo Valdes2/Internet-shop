@@ -22,8 +22,4 @@ public interface UserDao {
     User login(String login, String password) throws AuthenticationException;
 
     Optional<User> getByToken(String token);
-
-    void addRole(Long roleId, Long userId);
-
-    List<Order> getUserOrders(Long userId);
 }

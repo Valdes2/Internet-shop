@@ -8,6 +8,7 @@ import mate.academy.internetshop.dao.UserDao;
 import mate.academy.internetshop.exceptions.AuthenticationException;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Order;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.util.HashUtil;
 import mate.academy.internetshop.util.HibernateUtil;
@@ -148,46 +149,4 @@ public class UserDaoHibernateImpl implements UserDao {
         }
     }
 
-    @Override
-    public void addRole(Long roleId, Long userId) {
-        Transaction transaction = null;
-        Session session = null;
-        try {
-            session = HibernateUtil.sessionFactory().openSession();
-            transaction = session.beginTransaction();
-            Query query = session
-                    .createSQLQuery("INSERT INTO users_roles (role_id, user_id) VALUES (?, ?);");
-            query.setParameter(1, roleId);
-            query.setParameter(2, userId);
-            query.executeUpdate();
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-
-    }
-
-    @Override
-    public List<Order> getUserOrders(Long userId) {
-        List<Order> userOrders = new ArrayList<>();
-        Session session = null;
-        User user = get(userId);
-        try {
-            session = HibernateUtil.sessionFactory().openSession();
-            Query query = session.createQuery("FROM Order WHERE user=:user");
-            query.setParameter("user", user);
-            userOrders = query.list();
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-        return userOrders;
-    }
 }

@@ -37,8 +37,7 @@ public class RoleDaoJdbcImpl extends AbstractDao implements RoleDao {
         return null;
     }
 
-    @Override
-    public Set<Role> getAllRoles(Long userId) {
+    private Set<Role> getAllRoles(Long userId) {
         Set<Role> allRoles = new HashSet<>();
         String query = "SELECT * FROM users_roles WHERE user_id = ?;";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {

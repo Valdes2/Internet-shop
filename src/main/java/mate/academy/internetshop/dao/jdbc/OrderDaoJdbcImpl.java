@@ -12,6 +12,7 @@ import mate.academy.internetshop.dao.OrderDao;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Item;
 import mate.academy.internetshop.model.Order;
+import mate.academy.internetshop.model.User;
 import org.apache.log4j.Logger;
 
 @Dao
@@ -94,6 +95,11 @@ public class OrderDaoJdbcImpl extends AbstractDao implements OrderDao {
         } catch (SQLException e) {
             logger.error("Can`t delete bucket", e);
         }
+        return null;
+    }
+
+    @Override
+    public List<Order> getUserOrders(User user) {
         return null;
     }
 

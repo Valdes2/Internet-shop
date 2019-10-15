@@ -193,8 +193,7 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         return Optional.empty();
     }
 
-    @Override
-    public void addRole(Long roleId, Long userId) {
+    private void addRole(Long roleId, Long userId) {
         String query = "INSERT INTO users_roles (role_id, user_id) VALUES (?, ?);";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setLong(1, roleId);
@@ -226,7 +225,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
         }
     }
 
-    @Override
     public List<Order> getUserOrders(Long userId) {
         List<Order> userOrders = new ArrayList<>();
         String query

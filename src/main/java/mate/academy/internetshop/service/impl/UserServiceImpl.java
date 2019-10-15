@@ -59,8 +59,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Order> getOrders(Long userId) {
-        return userDao.getUserOrders(userId);
+    public List<Order> getOrders(User user) {
+        return orderDao.getUserOrders(user);
     }
 
     @Override
@@ -78,13 +78,4 @@ public class UserServiceImpl implements UserService {
         return userDao.getByToken(token);
     }
 
-    @Override
-    public void addRole(User user, Long roleId) {
-        userDao.addRole(roleId, user.getId());
-    }
-
-    @Override
-    public Set<Role> getAllRoles(Long userId) {
-        return roleDao.getAllRoles(userId);
-    }
 }
