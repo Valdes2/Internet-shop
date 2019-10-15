@@ -1,5 +1,8 @@
 package mate.academy.internetshop.dao.hibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import mate.academy.internetshop.dao.OrderDao;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Order;
@@ -8,9 +11,6 @@ import mate.academy.internetshop.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Dao
 public class OrderDaoHibernateImpl implements OrderDao {
