@@ -1,6 +1,6 @@
 # Internet shop
 
-##Contents
+## Contents
 - [Project Description](#description)
 - [Project Structure](#structure)
 - [Contacts](#contacts)
