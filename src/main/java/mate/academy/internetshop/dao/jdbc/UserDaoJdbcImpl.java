@@ -66,7 +66,6 @@ public class UserDaoJdbcImpl extends AbstractDao implements UserDao {
                 String pass = resultSet.getString("password");
                 User user = new User(name, login, pass);
                 user.setId(resultSet.getLong("user_id"));
-                //user.setBucketId(resultSet.getLong("bucket_id"));
                 user.setSalt(resultSet.getBytes("salt"));
                 user.setToken(resultSet.getString("token"));
                 user.setOrders(getUserOrders(id));
