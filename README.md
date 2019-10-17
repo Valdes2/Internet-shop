@@ -24,6 +24,6 @@ Internet-shop is web application where we can register user with different roles
 ## <a name="contacts"></a>Contacts
 * Author - Tereschuk Michail
 * Gmail: [michail.tereschuk@gmail.com]
-* LinkedIn: [Michael T.](https://www.linkedin.com/in/michael-t-a18949192@)
+* LinkedIn: [Michael T.](https://www.linkedin.com/in/michail-tereschuk-709334196/@)
 
 
